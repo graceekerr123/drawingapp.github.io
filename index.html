@@ -68,28 +68,32 @@
 
 <br><br><h2>TESTING</h2> 
 
-<h3>Testing the Colour array</h3>
-<p>I used 'console.log(colArray[1]);' and 'console.log(colArray[4]);' to test if the website returned the correct colour.</p>
+<h3>Test One:</h3>
+<p>I tested the colour array. I used 'console.log(colArray[1]);' and 'console.log(colArray[4]);' to test if the website returned the correct colour.</p>
 <img class="img-responsive" src="assets/img/s1test1.png" alt="A test for sprint 1">
 
+<br>
+<h3>Test Two:</h3>
 <p>After I coded a Rectangle class in rectangle.js I tested it by instatiating a rectangle in main.js and calling it.
 	This was a sucessful test. I was also able to check the colour, the 4th colour in the colArray.
 </p>
-<img class="img-responsive" src="assets/img/s1test2.png" alt="A test for sprint 1">
+<img class="img-responsive" src="assets/img/s1test2.png" height=300px alt="A test for sprint 1">
 
 <br>
 
-<h3>Test One:</h3>
-<p>I tested all the mouse listeners to make sure they work properly.</p>
+<h3>Test Three:</h3>
+<p>I tested all the mouse listeners to make sure they work properly. As you can see, the consol log shows that they are.</p>
 <video class="center" controls>
 	<source src="assets/vids/s1test1.mov" type="video/mp4">
   </video>
 
-<h3>Test Two:</h3>
-<P>I tested that the outline for the rectangle worked correctly. I found a problem for sprint 1 with this test, as when the drag extends beyond the boundaries of the canvas
-
-
-	that was when the user tries to draw a rectangle outside of the canvas, the code doesn't realise this as mouse up 
+<h3>Test Four:</h3>
+<P>I tested that the outline for the rectangle worked correctly. It was good that the rectangle outlined appeared, but I did
+	 find a problem with this test. This problem happens when the drag extends beyond the boundaries of the canvas, as beyond the boundaries 
+	 the mouse isn't registered because there is no mouse listeners on this part of the screen. In the test, when the user tries to draw a 
+	 rectangle outside of the canvas, the rectangle guide remains the same until the mouse returns to inside the boundaries again.
+	 
+	 the code doesn't realise this as mouse up 
 and the program goes
 </P>
 <video class="center" controls>
@@ -97,7 +101,24 @@ and the program goes
   </video>
 
 <br><br><h2>REFLECTION</h2> 
+<p>I think that this sprint went smoothly as I didn't encounter many problems while getting to the final base product which is sprint 1.
+This was a very important sprint because I was able to get some major elements of my wed based drawing application working such as the canvas,
+and secondly the ability to draw a rectangle guide and rectangle. Through testing it became apparant that the code that I have at the moment
+for the canvas isn't suffient for a web application to go out into the real world. It's clear that in a later sprint that I will have to 
+fix the problem I found, that the rectangle guide is not updated when the mouse goes outside of the canvas. Although this problem should be fixed before
+the project is finished, it isn't as high a priority as other basic functions this application is expected to have including buttons and 
+a colour selector. For this reason, I'll be adding this problem to my backlog. Next sprint, I think I'll focus on creating a drawing area inside 
+the canvas which will make my application look more structured and professional. 
 
+<br><br>
+
+A plus on working on this next is that it will minimise the problem of the mouse not being registered outside of the canvas. This is because
+having a separate box inside the whole canvas indicates to the user that they're expected to draw all the shapes inside the smaller box (the 
+drawing area) instead of the canvas. And due to the fact that mouse listeners are on the canvas as whole then if the user happens to go over the 
+drawing area outline the rectangle will still draw the shape (although I predict I will have to code a function to make sure the shape stays inbounds)
+instead of not updating the rectangle shape like before. The not updating of the shape outline will still occur if the user tries to draw the shape from the drawing box to outside
+to the canvas and outside again to the document body. However, sprint 2 makes it less likely that this problem will occur for a regularly abiding user.
+</p>
 
 <br><br><hr>
 <h1><a id="2">Sprint Two </a></h1>
@@ -105,8 +126,84 @@ and the program goes
 
 <h2>AIM</h2>
 <p>To create a drawing area inside the canvas, so that the user can only make shapes in the drawing area, 
-	not the whole canvas area. The idea for the area outside of the drawing area, but inside the canvas will
-	 be for buttons for the shape and colour.
+	instead of the whole canvas area. The area outside of the drawing area will be for buttons deciding shapes and colours 
+	- all things to be made in further sprints.
+</p>
+
+<br><h2>PLAN</h2> 
+<img class="img-responsive" src="assets/img/s2plan.png" alt="The planning sheet for sprint 2">
+
+
+<br><br><h2>KANBAN BOARD</h2> 
+<img class="img-responsive" src="assets/img/s2kanban.png" alt="The kanban sheet for sprint 2">
+
+
+<br><br><h2>TESTING</h2> 
+<h3>Test One:</h3>
+<p>This was a problem with registering the proper time when mouse is down. After considering the issue,
+	 I realised it was a problem with updating the w and h of the rectangle. This is likely due to the fact that
+	 the update function can't run at the same time as the down function which causes the w and h to not always be updated.
+	
+</p>
+<video class="center" controls>
+	<source src="assets/vids/s2test1.mov" type="video/mp4">
+  </video>
+  <p> While testing this I console loged the widths and the height as well as 'console.log(temp)' to understand this more. It became clear that the
+	   displacement of the mouse's position from the original click and next tap (check this) became the width and height
+	for the random rectangle that appeared when I tapped. </p>
+  <img class="img-responsive" src="assets/img/s2test1.png" alt="The is a screenshot for sprint 2">
+  <p>I have two possible solutions. This first was to run 'update()' inside the 'down' function.... This is bad because essentially
+	  'down()' will run twice which is not very efficient.
+  </p>
+  <img class="img-responsive" src="assets/img/s2test2.png" alt="The is a screenshot for sprint 2">
+  <p>My text solution is to reset w and h to 0 inside the 'down' function. This is good becuase it fixed the problem.</p>
+  <img class="img-responsive" src="assets/img/s2test3.png" alt="The is a screenshot for sprint 2">
+
+<br><br>
+  
+
+<br><br>
+<h3>Test Two:</h3>
+
+<p>Test the boundraries. It works</p>
+
+<video class="center" controls>
+	<source src="assets/vids/s2test2.mov" type="video/mp4">
+  </video>
+
+  
+  <br><br>
+<h3>Test Three:</h3>
+<p> I had this problem that the rectangle would still be created if I clicked inside the drawing area and 
+	draged out into the canvas. 
+</p>
+
+<img class="img-responsive" src="assets/img/s2test4.png" alt="The is a screenshot for sprint 2">
+
+<p>Test that my click and drag guide and rectangle only works for inside the drawing area.</p>
+
+<video class="center" controls>
+	<source src="assets/vids/s2test5.mov" type="video/mp4">
+  </video>
+
+  <p>During this test, I found this problem when the mouse went outside of the canvas entirely and just on the webpage.
+	  The moust wouldn't be registered until it went back on the canvas.
+  </p>
+
+  <br><br>
+<br><br><h2>REFLECTION</h2> 
+
+
+
+
+
+<br><br><hr>
+<h1><a id="3">Sprint Three </a></h1>
+<p><a href="#" class="btn">Link to the Canvas Page</a></p>
+
+<h2>AIM</h2>
+<p> To allow the user to change the drag and drop shape. I will make two buttons, one for the rectangle drag a drop (already coded)
+	and the other for an ellipse drag and drop (to be coded), for the user to switch between.
 </p>
 
 <br><br><h2>PLAN</h2> 
@@ -132,9 +229,18 @@ and the program goes
 
 
 <br><br><hr>
-<h1><a id="3">Sprint Three </a></h1>
 
 
+
+<h3>Test Two:</h3>
+<p> I found a problem after I clicked and draged a rectangle it would continue to draw the rectangle guide, and keep
+	the MouseStart point. You can also see that my tap of the mouse is registered to create the rectangle guide, but 
+it doesn't create a filled in rectangle.</table>
+</p>
+  <video class="center" controls>
+	<source src="assets/vids/s2test2.mov" type="video/mp4">
+  </video>
+<br><br>
 
 
 <p> <b>How to fix the current mouse listener problem</b>

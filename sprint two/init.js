@@ -3,8 +3,8 @@ console.log("init js is called")
 // basic connecting code
 canvas = document.querySelector('#myCanvas');
 var ctx = canvas.getContext('2d');
-var width = 800;
-var height = 600;
+var width = 1000;
+var height = 700;
 canvas.width = width;
 canvas.height = height;
 
