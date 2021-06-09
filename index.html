@@ -36,7 +36,7 @@
 					<li><a href="#1">Sprint 1</a></li>
 					<li><a href="#2">Sprint 2</a></li>
 					<li><a href="#3">Sprint 3</a></li>
-					<li><a href="#O">Other</a></li>
+					<li><a href="#0">Other</a></li>
 				</ul>
 			</div>
 			<div class="content">
@@ -53,7 +53,7 @@
 
 
 <h1><a id="1">Sprint One </a></h1>
-<p><a href="#" class="btn">Link to the Canvas Page</a></p>
+<p><a href="sprint one/sprintone.html" class="btn" target="_blank">Link to the Canvas Page</a></p>
 
 <h2>AIM</h2>
 <p>To allow the user to click with their mouse and then drag to draw a rectangle.</p>
@@ -100,8 +100,10 @@ and the program goes
 	<source src="assets/vids/s1test2.mov" type="video/mp4">
   </video>
 
+
 <br><br><h2>REFLECTION</h2> 
-<p>I think that this sprint went smoothly as I didn't encounter many problems while getting to the final base product which is sprint 1.
+<p>I think that this sprint went smoothly as I didn't encounter many problems while getting to the final base product which is sprint 1. Sprint one
+	 is the simpliest application i could possibly make. Now we can improve through the subsequent sprints.
 This was a very important sprint because I was able to get some major elements of my wed based drawing application working such as the canvas,
 and secondly the ability to draw a rectangle guide and rectangle. Through testing it became apparant that the code that I have at the moment
 for the canvas isn't suffient for a web application to go out into the real world. It's clear that in a later sprint that I will have to 
@@ -122,7 +124,7 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 
 <br><br><hr>
 <h1><a id="2">Sprint Two </a></h1>
-<p><a href="#" class="btn">Link to the Canvas Page</a></p>
+<p><a href="sprint two/sprinttwo.html" class="btn" target="_blank">Link to the Canvas Page</a></p>
 
 <h2>AIM</h2>
 <p>To create a drawing area inside the canvas, so that the user can only make shapes in the drawing area, 
@@ -131,16 +133,17 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 </p>
 
 <br><h2>PLAN</h2> 
-<img class="img-responsive" src="assets/img/s2plan.png" alt="The planning sheet for sprint 2">
+<img class="img-responsive" src= "assets/img/s2kanban.png" alt="The planning sheet for sprint 2">
 
 
 <br><br><h2>KANBAN BOARD</h2> 
-<img class="img-responsive" src="assets/img/s2kanban.png" alt="The kanban sheet for sprint 2">
+<img class="img-responsive" src="assets/img/s2plan.png" alt="The kanban sheet for sprint 2">
 
 
 <br><br><h2>TESTING</h2> 
 <h3>Test One:</h3>
-<p>This was a problem with registering the proper time when mouse is down. After considering the issue,
+<p>This was a problem with registering the proper coordinates when mouse is down. After considering the issue and the tests
+	i've done,
 	 I realised it was a problem with updating the w and h of the rectangle. This is likely due to the fact that
 	 the update function can't run at the same time as the down function which causes the w and h to not always be updated.
 	
@@ -151,13 +154,15 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
   <p> While testing this I console loged the widths and the height as well as 'console.log(temp)' to understand this more. It became clear that the
 	   displacement of the mouse's position from the original click and next tap (check this) became the width and height
 	for the random rectangle that appeared when I tapped. </p>
-  <img class="img-responsive" src="assets/img/s2test1.png" alt="The is a screenshot for sprint 2">
+  <img class="img-responsive" src="assets/img/s2test1.png" height=400 alt="The is a screenshot for sprint 2">
   <p>I have two possible solutions. This first was to run 'update()' inside the 'down' function.... This is bad because essentially
 	  'down()' will run twice which is not very efficient.
   </p>
-  <img class="img-responsive" src="assets/img/s2test2.png" alt="The is a screenshot for sprint 2">
-  <p>My text solution is to reset w and h to 0 inside the 'down' function. This is good becuase it fixed the problem.</p>
-  <img class="img-responsive" src="assets/img/s2test3.png" alt="The is a screenshot for sprint 2">
+  <img class="img-responsive" src="assets/img/s2test2.png"  height=400 alt="The is a screenshot for sprint 2">
+  <p>My text solution is to reset w and h to 0 inside the 'down' function. This is good becuase it fixed the problem. It is a better
+	  solution that my first solution as it's more efficient as it makes sure that my program only needs to run once.
+  </p>
+  <img class="img-responsive" src="assets/img/s2test3.png"  height=400 alt="The is a screenshot for sprint 2">
 
 <br><br>
   
@@ -178,7 +183,7 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 	draged out into the canvas. 
 </p>
 
-<img class="img-responsive" src="assets/img/s2test4.png" alt="The is a screenshot for sprint 2">
+<img class="img-responsive" src="assets/img/s2test4.png" height=400 alt="The is a screenshot for sprint 2">
 
 <p>Test that my click and drag guide and rectangle only works for inside the drawing area.</p>
 
@@ -199,11 +204,127 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 
 <br><br><hr>
 <h1><a id="3">Sprint Three </a></h1>
-<p><a href="#" class="btn">Link to the Canvas Page</a></p>
+<p><a href="sprint three/sprintthree.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
 
 <h2>AIM</h2>
 <p> To allow the user to change the drag and drop shape. I will make two buttons, one for the rectangle drag a drop (already coded)
 	and the other for an ellipse drag and drop (to be coded), for the user to switch between.
+
+	
+	To have a viable product.
+</p>
+
+<br><br><h2>PLAN</h2> 
+<img class="img-responsive" src="assets/img/s3plan.png" alt="The planning sheet for sprint _">
+
+<p>I have a static variable with button selected, so that if it changes for one button it'll change for
+	all of the buttons.
+
+	There will be static variable called Button.Shape. Which will equal either rectangle or ellipse.
+</p>
+
+
+
+<br><br><h2>KANBAN BOARD</h2> 
+<img class="img-responsive" src="assets/img/s3kanban.png" alt="The kanban sheet for sprint 3">
+
+<br><br><h2>TESTING</h2> 
+<h3>Testing the Ellipse</h3>
+<p>I want to test the ellipse function and then test the drag and drop of the ellipse. This is important to do
+	before trying to implement the button code because it will make fixing any problems a million times easier.
+</p>
+<img class="img-responsive" src="assets/img/ellipse1.png" alt="The ellipse test for sprint 3">
+
+<h3>Test One:</h3>
+<p> Testing the button:<br>
+	It is clear that the button was instatiated properly. I also check in inbounds
+	for the button and it is clear that it worked. Something to note is that the outline
+	of the button is not considered inBounds. I did this by using simple code (as shown below)
+	and I think to make it more efficient code, I will make sure to add buttons in a list, also
+	with another list with the button names in it. The loop will run through the list of the buttons
+	and the list of the button names. This will definetly be more efficient as
+	in the future sprints i'm expecting to have numerous buttons, and therefore, it make sense that 
+	a better system of storing the button information is needed.
+	</p>
+	<img class="img-responsive" src="assets/img/s3test1.png" alt="The  sheet for sprint 3">
+	
+<video class="center" controls>
+	<source src="assets/vids/s3test1.mov" type="video/mp4">
+  </video>
+
+  <h3>Iterative Decision</h3>
+  <p>First Choice: to have a varaible defined in the constructure which can be true or false depending on whether or not
+	  the button is selected. 
+	  <br>
+	  Second Choice: to have a static variable - so only one button is the chosen button.
+  </p>
+
+<h3>Test Two:</h3>
+
+<video class="center" controls>
+	<source src="assets/vids/s3test2.mov" type="video/mp4">
+  </video>
+
+<p>Testing more than one button at the same time. And testing that the change of colours depending
+	if the mouse is hovering over the button is working. I'm using the idea of my first choice for this. I was sucessful in making two buttons appear on the page
+	and the hover over the buttons also works. As you ca see from my console log, the false and true is working properly.
+<br>
+	However, there was a problem with the selection of the buttons as when I tried to select a button for the second time. 
+	By this I mean that after already selecting a button and wanting to select the other button, the code wouldn't deselect the first button.
+	It was because of this that I decided that my first choice of the iteraive decison is inherted flawed, as it doesn't
+	deselect buttons when i'm selecting another one. I want to try the static variable. After incorprating the static variable
+	into my code, it seems like it is the better option as it makes sure that only one button is chosen at one point of time.
+<br>
+	The static variable is at the very end after declaring the class. It is called 'Button.Clicked'. This is more practical
+
+</p>
+
+  <img class="img-responsive" src="assets/img/s3test2.png" alt="The planning sheet for the iterative deicison sprint 3">
+
+  <br><br>
+  <h3>Test 3</h3>
+  <p> I wanted to test that the drag and drop of the ellipse worked, however when I drew it, it was very much so enlarged
+	  and didn't fit the screen.
+	  <img class="img-responsive" src="assets/img/s3test3.png" height=400 alt="The problem in sprint 3">
+<br>
+	  I then came across another problem, and that is that my ellipse's that I was drawing weren't changing depending
+	  on the movements of the mouse. I fixed this problem by fixing the parameters (is this the right word?) for when I 
+	  define (is this the right word?) the Ellipse inside the 'controlobject.js' just before it's pushed to the temp list. 
+	  Before the width and height was defined as 'w' and 'h', and to fix this I changed it to 'this.w' and 'this.h'.
+WHYYY IS THIS?
+
+	  <br>
+	  Another problem that I noticed during this test is that before selecting any buttons, it still draws the guide rectangle
+		and then doesn't draw any shape. I will put on the backlog to make sure that the guide will only draw after one of the buttons 
+		is selected. This will make it less confusing for the user. 
+	  <video class="center" controls>
+		<source src="assets/vids/s3test3.mov" type="video/mp4">
+	  </video>
+
+	  <h3>Test 4:</h3>
+	  <p></p>
+
+  </P>
+
+ 
+
+
+<br><br><h2>REFLECTION</h2> 
+
+
+<br><br><hr>
+
+
+
+
+<br><br><hr>
+
+<br><br><hr>
+<h1><a id="4">Sprint Four </a></h1>
+<p><a href="" class="btn"  target="_blank">Link to the Canvas Page</a></p>
+
+<h2>AIM</h2>
+<p> 
 </p>
 
 <br><br><h2>PLAN</h2> 
@@ -228,9 +349,14 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 <br><br><h2>REFLECTION</h2> 
 
 
-<br><br><hr>
 
 
+
+
+
+
+
+<br><br<br><br<br><br<br><br<br><br<br><br>
 
 <h3>Test Two:</h3>
 <p> I found a problem after I clicked and draged a rectangle it would continue to draw the rectangle guide, and keep
