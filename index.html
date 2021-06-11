@@ -36,6 +36,9 @@
 					<li><a href="#1">Sprint 1</a></li>
 					<li><a href="#2">Sprint 2</a></li>
 					<li><a href="#3">Sprint 3</a></li>
+					<li><a href="#4">Sprint 4</a></li>
+					<li><a href="#5">Sprint 5</a></li>
+					<li><a href="#6">Sprint 6</a></li>
 					<li><a href="#0">Other</a></li>
 				</ul>
 			</div>
@@ -53,7 +56,7 @@
 
 
 <h1><a id="1">Sprint One </a></h1>
-<p><a href="sprint one/sprintone.html" class="btn" target="_blank">Link to the Canvas Page</a></p>
+<p><a href="sprint1/sprintone.html" class="btn" target="_blank">Link to the Canvas Page</a></p>
 
 <h2>AIM</h2>
 <p>To allow the user to click with their mouse and then drag to draw a rectangle.</p>
@@ -124,7 +127,7 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 
 <br><br><hr>
 <h1><a id="2">Sprint Two </a></h1>
-<p><a href="sprint two/sprinttwo.html" class="btn" target="_blank">Link to the Canvas Page</a></p>
+<p><a href="sprint2/sprinttwo.html" class="btn" target="_blank">Link to the Canvas Page</a></p>
 
 <h2>AIM</h2>
 <p>To create a drawing area inside the canvas, so that the user can only make shapes in the drawing area, 
@@ -159,7 +162,7 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 	  'down()' will run twice which is not very efficient.
   </p>
   <img class="img-responsive" src="assets/img/s2test2.png"  height=400 alt="The is a screenshot for sprint 2">
-  <p>My text solution is to reset w and h to 0 inside the 'down' function. This is good becuase it fixed the problem. It is a better
+  <p>My second solution is to reset w and h to 0 inside the 'down' function. This is good becuase it fixed the problem. It is a better
 	  solution that my first solution as it's more efficient as it makes sure that my program only needs to run once.
   </p>
   <img class="img-responsive" src="assets/img/s2test3.png"  height=400 alt="The is a screenshot for sprint 2">
@@ -204,7 +207,7 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 
 <br><br><hr>
 <h1><a id="3">Sprint Three </a></h1>
-<p><a href="sprint three/sprintthree.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
+<p><a href="sprint3/sprintthree.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
 
 <h2>AIM</h2>
 <p> To allow the user to change the drag and drop shape. I will make two buttons, one for the rectangle drag a drop (already coded)
@@ -257,8 +260,14 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 	  the button is selected. 
 	  <br>
 	  Second Choice: to have a static variable - so only one button is the chosen button.
+	  <br>
+	  We can see the effectiveness of the first choice in test two. 
   </p>
 
+  <img class="img-responsive" src="assets/img/s3decision1.png" alt="The iterative deicison sheet for sprint 3">
+  <img class="img-responsive" src="assets/img/s3decision2.png" alt="The iterative deicison sheet for sprint 3">
+
+<br>
 <h3>Test Two:</h3>
 
 <video class="center" controls>
@@ -279,8 +288,6 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 
 </p>
 
-  <img class="img-responsive" src="assets/img/s3test2.png" alt="The planning sheet for the iterative deicison sprint 3">
-
   <br><br>
   <h3>Test 3</h3>
   <p> I wanted to test that the drag and drop of the ellipse worked, however when I drew it, it was very much so enlarged
@@ -290,8 +297,9 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 	  I then came across another problem, and that is that my ellipse's that I was drawing weren't changing depending
 	  on the movements of the mouse. I fixed this problem by fixing the parameters (is this the right word?) for when I 
 	  define (is this the right word?) the Ellipse inside the 'controlobject.js' just before it's pushed to the temp list. 
-	  Before the width and height was defined as 'w' and 'h', and to fix this I changed it to 'this.w' and 'this.h'.
-WHYYY IS THIS?
+	  Before the width and height was defined as 'w' and 'h', and to fix this I changed it to 'this.w' and 'this.h'. So the width and
+	  height taken are the integers that are onces that are passed through controlobject.js rather than the w and h defined in main.js.
+Is this word right?
 
 	  <br>
 	  Another problem that I noticed during this test is that before selecting any buttons, it still draws the guide rectangle
@@ -301,24 +309,146 @@ WHYYY IS THIS?
 		<source src="assets/vids/s3test3.mov" type="video/mp4">
 	  </video>
 
-	  <h3>Test 4:</h3>
-	  <p></p>
-
-  </P>
-
- 
+	</p>
 
 
 <br><br><h2>REFLECTION</h2> 
+<p>Big thing is that the shapes can only be only colour. I need colour options. Why not a colour palette at the bottom
+	of the page - give a whole list of options. This seems like it's the biggest priority because it's important for the
+	user to have different colours to draw with to foster creativity.
+
+	<br>
+	I learnt the importance of static variables which will help me in future sprints.
+</p>
 
 
 <br><br><hr>
 
 
+<h1><a id="4">Sprint Four </a></h1>
+<p><a href="sprint4/sprintfour.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
+
+<h2>AIM</h2>
+<p> 
+</p>
+
+<br><br><h2>PLAN</h2> 
+<img class="img-responsive" src="assets/img/s4plan.png" alt="The planning sheet for sprint 4">
+
+<img class="img-responsive" src="assets/img/s4plan2.png" alt="The planning sheet for sprint 4">
 
 
-<br><br><hr>
+<br><br><h2>KANBAN BOARD</h2> 
+<img class="img-responsive" src="assets/img/s4kanban.png" alt="The kanban sheet for sprint 4">
 
+
+<br><br><h2>TESTING</h2> 
+<h3>Test One:</h3>
+<p>Testing that two swatches work:
+<br>
+This was alright because Swatches are very similar to buttons. So I learnt from all my mistakes I made in sprint 3 while
+creating two interactive buttons, and applied this while making swatches. A big part of this was reconigising the importantance
+of static variables from very early on in the sprint. I learnt from the previous sprint that static variables are crucical 
+for interactive spaces/area (IS THAT THE RIGHT WORD?) on the canvas as if the button or swatch leads to a particiular action, 
+then we need a swatch to make sure that the action is always true for each interactive area that is clicked on. (DOES THIS MAKES SENSE?)
+As you can see, I had no iterative decision as I knew from the get go that a static variable is the obvious way to go.
+
+</p>
+
+<video class="center" controls>
+	<source src="assets/vids/s4test1.mov" type="video/mp4">
+  </video>
+
+
+
+<h3>Test Two:</h3>
+<p>This will be testing that the two swatches work properly. Ahh perfect so good. But please do explain in detail what
+	is occuring in this test </p>
+<video class="center" controls>
+	<source src="assets/vids/s4test2.mov" type="video/mp4">
+  </video>
+
+  <h3>Iterative decision</h3>
+<p>
+Now that I know two swatches work, I need to make sure that all colours from my three tiered colour array (in init.js)
+are displayed on the screen and that all of these function properly.
+</p>
+<h4>Option 1</h4>
+<p>This is to instantiate all swatches in main.js. Due to my 3 x 10 colour pallette /colour array, this will essentially
+	30 lines of code to instatiate all the colours (with the varing transparancys) and then push all 30 of these to a list, 
+	from which we can create all of these on the canvas with a loop. Although this may be time consuming, it's a very logical
+	way to attatck the problem of getting so many swatches onto the canvas.
+	<br>
+	As you can see from the photo below, I coded 6 swatches like this. It was very time consuming for only a small pay off.
+	Further adding to the fact that option 1 is flawed, is that I only coded 6 out of 30 swatched, which only emphaisises
+	how many lines of code.
+<br>
+<img class="img-responsive" src="assets/img/s4decision1a.png" height=150 alt="Iterative deicison or sprint 4">
+	<img class="img-responsive" src="assets/img/s4decision1.png" height=400 alt="Iterative deicison or sprint 4">
+</p>
+
+<h4>Option 2</h4>
+<p>This option is to make a loop that would instatiate all of the swatches. This may be more difficult to code and may take
+	more time to develop this code. However if I do consider this the better and more effective option, then I think it's worth
+	spending a bit more time on it to make it good. The benefits outweight the extra time, espeically as colours is a major 
+	component of this program. From the last two screenshots, it shows that I can easily change the size of the colour palette by easily 
+	changing a couple of numbers - so easy!
+
+	<br>
+	<img class="img-responsive" src="assets/img/s4decision2a.png" height=150 alt="Iterative deicison or sprint 4">
+	<img class="img-responsive" src="assets/img/s4decision2.png" height=400 alt="Iterative deicison for sprint 4">
+	<img class="img-responsive" src="assets/img/s4decision2b.png" height=400 alt="Iterative deicison for sprint 4">
+</p>
+
+
+<h4>Decision</h4>
+<p>In the end I decided that Option 2 is more practical as the code is more compact. This is better for the code as it helps
+	the code repeating itself so many time. This also makes it more functional, so another coder could come and work on my drawing
+	app and know exactly which part of code to look for to help fix the program if there's a problem. And if there is a problem, they
+	would only need to fix code in one place rather than 30 lines - which is way easier.
+</p>
+
+
+<h3>Test Three: Testing full palette</h3>
+<p> While coding the full colour palette, using option 2 I ran into a few problems. The first is that nothing appeared
+	in terms of the colour palette and I also lost control of the buttons. However while console logging my code, I could
+	deduct that the instatiating of the swatches was working perfectly as 30 swatches were instaitated. From this I know that 
+	there is a problem creating this instatiated swatches.
+</p>
+
+<img class="img-responsive" src="assets/img/s4prob1.png" height=400 alt="Iterative deicison for sprint 4">
+
+<video class="center" controls>
+	<source src="assets/vids/s4test3.mov" type="video/mp4">
+  </video>
+
+
+
+<br><br><h2>REFLECTION</h2> 
+<p>At this point I've coded all the major parts of this program including a drawing area, a choice of shapes and
+	a choice of colours. I think that the next priority it to expand on the options that I already have, espeically
+	the drawing options. Having more shape options seems like a big priority to me as anyone who downloads a drawing app
+	would expect a reasonably variety of drawing options.
+
+	<br>
+	Viable project or something
+
+	<br>
+	As you can see from one of the testing videos that the drawing area gets filled up pretty fast,
+	I think that it would be helpful to make sure that the user has the option of an undo button which would 
+	erase the shapes they drew. This would make the drawing app better as it would be more flexible as it 
+	would let users to have the option to redraw their shapes and draw more than before. As you can see, I can think of
+	many other features to include
+
+</p>
+
+
+
+
+
+
+
+<br><br><br>
 <br><br><hr>
 <h1><a id="4">Sprint Four </a></h1>
 <p><a href="" class="btn"  target="_blank">Link to the Canvas Page</a></p>
@@ -347,13 +477,6 @@ WHYYY IS THIS?
   </video>
 
 <br><br><h2>REFLECTION</h2> 
-
-
-
-
-
-
-
 
 
 <br><br<br><br<br><br<br><br<br><br<br><br>
