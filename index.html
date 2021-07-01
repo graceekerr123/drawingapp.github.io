@@ -39,6 +39,8 @@
 					<li><a href="#4">Sprint 4</a></li>
 					<li><a href="#5">Sprint 5</a></li>
 					<li><a href="#6">Sprint 6</a></li>
+					<li><a href="#7">Sprint 7</a></li>
+					<li><a href="#8">Sprint 8</a></li>
 					<li><a href="#0">Other</a></li>
 				</ul>
 			</div>
@@ -444,12 +446,16 @@ are displayed on the screen and that all of these function properly.
 </p>
 
 
+
+
+
+
 <br><br><hr>
-<h1><a id="4">Sprint Five </a></h1>
-<p><a href="sprint5/sprintfive.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
+<h1><a id="5">Sprint Five </a></h1>
+<p><a href="sprint5 option 2/sprintfive.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
 
 <h2>AIM</h2>
-<p> 
+<p> To have options for more shapes and to include options for a range of polygons
 </p>
 
 Smallest of the two values. So if they draw like a long rectangle (long w, smaallist h) it would be h x h to make a s
@@ -575,7 +581,7 @@ control.object.js. </p>
 <p>I created a new class called 'Polygon_buttons' that will be used to create the buttons that have the side length options for the polygon.
 	I had to create a new side length buttons for this. It makes sense that these side length buttons to be smaller. For the new 'Polygon_buttons'
 	class I had to make 2 new static variables; 1 to make sure that only one of these side length buttons can be selected at one time, and the other
-	to make sure .......
+	to make sure that the number of sides could be passed through to other sections of code.
 </p>
 
 <video class="center" controls>
@@ -583,7 +589,8 @@ control.object.js. </p>
   </video>
 
   <p>As you can see that my new 'Polygon_buttons' class works as these side buttons can be selected when the shape buttons are also selected - which is
-	  a crucial part of this option. As I haven't connected the actual instaitation of different sized polygon to the buttons yet. But a problem that I do see 
+	  a crucial part of this option. As mentioned, this is due to their being a new class of buttons that is separate to the original shape buttons.
+	I haven't connected the actual instaitation of different sized polygons to the buttons yet. But a problem that I do see 
 	  is that the side length button is still selected when the user decides to draw another shape. Although this is alright in theory because the shape is 
 	  still drawn normally, but it is a bit confusing and not ideal.
 
@@ -617,19 +624,80 @@ so I should do what I can do now to minimise this.
 </p>
 
 
-
-
-
-
-<h3>Test Two:</h3>
-<video class="center" controls>
-	<source src="assets/vids/s5test2.mov" type="video/mp4">
-  </video>
-
 <br><br><h2>REFLECTION</h2> 
 
 
 <br><br<br>
+
+
+
+<h1><a id="6">Sprint Six </a></h1>
+<p><a href="sprint6/sprintfive.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
+
+
+<h2>AIM</h2>
+<p> To have a undo and clear all button.
+</p>
+
+<br><br><h2>PLAN</h2> 
+<img class="img-responsive" src="assets/img/s6plan" alt="The planning sheet for sprint 6">
+
+
+<br><br><h2>KANBAN BOARD</h2> 
+<img class="img-responsive" src="assets/img/s6kanban" alt="The kanban sheet for sprint 6">
+
+
+<br><br><h2>TESTING</h2> 
+
+
+
+
+<h3>Test One: Testing the selection of the buttons work</h3>
+<video class="center" controls>
+	<source src="assets/vids/s6testa.mov" type="video/mp4">
+  </video>
+  <p>The selection of the buttons works well. As when either the undo or clear all button is clicked, the orginal shapes buttons will
+	  be deselected.
+</p>
+
+
+	
+	<h3>Test Two: Making sure the buttons work </h3>
+
+	<video class="center" controls>
+		<source src="assets/vids/s6test1.mov" type="video/mp4">
+	  </video>
+	
+<p>As you can see, my clear all and undo buttons are not completely functional. If i have a bunch of shapes on the page, and if I click on 
+	undo it won't work; but if I click up and down again (inside the drawing area), it'll remove a shape. This is also the same for the clear all 
+	button - as the shapes will only be cleared after I click inside the drawing area after clicking the clear all button.
+	 From this test, I know that there's a delay because the programme is not recognising when the mouse goes up the first time.
+</p>
+<br>
+<p>After some more testing, I know that this is because the code for the clear and undo buttons and the code that recognises what 'Button.Clicked' is (inside button.js), are running at the 
+	same time. Along with the fact that the clear all/undo code is place in the 'mUp' function inside the 'controlobject.js' at the moment. For example, for the undo 
+	button, the 'Button.Clicked = "undo"' is reconised at the same time as the 'if Button.Clicked = "undo"' code. Due to this, the result of the 'Button.Clicked = "undo"'
+	is never carried out asnthe undo/clear all button isn't being processed until the 'mUp' function is called again and this occurs when the user clicks again. To fix 
+	this I will put the code for the clear all and undo inside the update function, so it is running all the time.
+ </p>
+ <video class="center" controls>
+	<source src="assets/vids/s6test12.mov" type="video/mp4">
+  </video>
+  <p>As you can see I fixed this problem, and now it works. So it will always undo the last drawn shape when clicking the undo button. Also the programme will always
+	  clear all the shapes on the screen if I click the clear all button. 
+  </p>
+
+<br>
+	<p>I had to make sure to have 'Button.Shape = "";' at the end of each command for clearing or undoing. This is because if 
+		these buttons are not deselected then the code will keep undoing until there is no shapes on the drawing board. And this is something
+		that the user did not ask for.
+	</p>
+	
+	
+	
+
+
+
 
 
 
@@ -639,6 +707,8 @@ so I should do what I can do now to minimise this.
 <br><br><hr>
 <h1><a id="4">Sprint Four </a></h1>
 <p><a href="" class="btn"  target="_blank">Link to the Canvas Page</a></p>
+
+
 
 <h2>AIM</h2>
 <p> 
@@ -667,6 +737,35 @@ so I should do what I can do now to minimise this.
 
 
 <br><br<br><br<br><br<br><br<br><br<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><h2>REFLECTION</h2> 
+
+
+<br><br<br><br<br><br<br><br<br><br<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <h3>Test Two:</h3>
 <p> I found a problem after I clicked and draged a rectangle it would continue to draw the rectangle guide, and keep
