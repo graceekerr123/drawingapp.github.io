@@ -694,6 +694,65 @@ so I should do what I can do now to minimise this.
 	</p>
 	
 	
+
+
+br><br><hr>
+<h1><a id="7">Sprint Seven </a></h1>
+<p><a href="sprint7/sprintseven.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
+
+
+
+<h2>AIM</h2>
+<p> To allow the user to be able to draw a line.
+</p>
+
+<br><br><h2>PLAN</h2> 
+<img class="img-responsive" src="assets/img/s7plan" alt="The planning sheet for sprint 7">
+
+
+<br><br><h2>KANBAN BOARD</h2> 
+<img class="img-responsive" src="assets/img/s7kanban" alt="The kanban sheet for sprint 7">
+
+
+<br><br><h2>TESTING</h2> 
+<h3>Test One: Testting the line function works.</h3>
+<p>It works.</p>
+<img class="img-responsive" src="assets/img/s7test.png" width=400 alt="Test for sprint 7">
+
+<h3>Test Two: Testing the button works properly.</h3>
+<p>There is a problem. This is because I set the end coordinates of the line to be the width and height of the bounding box. When I did this, it took the values 
+	of the width and height of the bounding box and adjusted them according to the 0,0 (the top left corner) of the page. To fix this I need
+	to set the end coordinates of the line to the position of the x and y mouse. This is because this will be the edge of the bounding box.
+</p>
+<video class="center" controls>
+	<source src="assets/vids/s7test1.mov" type="video/mp4">
+  </video>
+<p>The line now works. But it seems like when the line has a thick width (for example, 10) the line could be created pass the boundary 
+	of the drawing area. This means that my solution of making the bounding box not being able to go outside of the drawing area doesn't fix 
+	issue.
+</p>
+
+
+  <video class="center" controls>
+	<source src="assets/vids/s7test1a.mov" type="video/mp4">
+  </video>
+
+
+
+<h3>Test Two:</h3>
+<video class="center" controls>
+	<source src="assets/vids/s2tes2.mov" type="video/mp4">
+  </video>
+
+
+<p>I'm also interested to take away the bounding box for the line as there's no reason to have it as it's drawing a line not a shape. This is because 
+	the user can use where their cursor is to figure out where the line is going to end up. This also makes my programme cleaner.
+</p>
+
+<br><br><h2>REFLECTION</h2> 
+
+
+<br><br<br><br<br><br<br><br<br><br<br><br>
 	
 
 
