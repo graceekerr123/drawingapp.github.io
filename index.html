@@ -295,11 +295,11 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 	  <img class="img-responsive" src="assets/img/s3test3.png" height=400 alt="The problem in sprint 3">
 <br>
 	  I then came across another problem, and that is that my ellipse's that I was drawing weren't changing depending
-	  on the movements of the mouse. I fixed this problem by fixing the parameters (is this the right word?) for when I 
-	  define (is this the right word?) the Ellipse inside the 'controlobject.js' just before it's pushed to the temp list. 
-	  Before the width and height was defined as 'w' and 'h', and to fix this I changed it to 'this.w' and 'this.h'. So the width and
+	  on the movements of the mouse. I fixed this problem by fixing the variables for when I 
+	  instaitate the Ellipse inside the 'controlobject.js' just before it's pushed to the temp list. 
+	  Before the width and height was defined as 'w' and 'h', and to fix this I changed it to 'this.w' and 'this.h'.These are being updated from the mouse
+	  move function. So the width and
 	  height taken are the integers that are onces that are passed through controlobject.js rather than the w and h defined in main.js.
-Is this word right?
 
 	  <br>
 	  Another problem that I noticed during this test is that before selecting any buttons, it still draws the guide rectangle
@@ -413,7 +413,8 @@ are displayed on the screen and that all of these function properly.
 <p> While coding the full colour palette, using option 2 I ran into a few problems. The first is that nothing appeared
 	in terms of the colour palette and I also lost control of the buttons. However while console logging my code, I could
 	deduct that the instatiating of the swatches was working perfectly as 30 swatches were instaitated. From this I know that 
-	there is a problem creating this instatiated swatches.
+	there is a problem updating the swatches so they print. The problem was with the update function.
+	I fixed this by throurgh testing through the use of 'console.log's. 
 </p>
 
 <img class="img-responsive" src="assets/img/s4prob1.png" height=400 alt="Iterative deicison for sprint 4">
@@ -443,6 +444,192 @@ are displayed on the screen and that all of these function properly.
 </p>
 
 
+<br><br><hr>
+<h1><a id="4">Sprint Five </a></h1>
+<p><a href="sprint5/sprintfive.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
+
+<h2>AIM</h2>
+<p> 
+</p>
+
+Smallest of the two values. So if they draw like a long rectangle (long w, smaallist h) it would be h x h to make a s
+
+<br><br><h2>PLAN</h2> 
+<img class="img-responsive" src="assets/img/s5plan.png" alt="The planning sheet for sprint 5">
+
+
+<br><br><h2>KANBAN BOARD</h2> 
+<img class="img-responsive" src="assets/img/s5kanban.png" alt="The kanban sheet for sprint 5">
+
+
+<br><br><h2>TESTING</h2> 
+<h3>Test One: To see if my Triangle Class works</h3>
+<p>Originally I did run into some problems testing to see if the triangle class worked. However after testing my code with creating the triangle
+	at different points (e.g the begining, middle or end) of the 'function animate()' inside 'main.js'. The problem I had was that the triangle was
+	showing up behind other page elements so it looked like I messed up some code up inside the Triangle class. When I moved to code to
+	create the triangle to the end of the 'function animate()', the triangle was visible as it is printed after all other page elements.
+</p>
+<img class="img-responsive" src="assets/img/s5test1.png" height=400 alt="A test for sprint 5">
+
+<p>
+After consol logging I could see it wasn't a problem with the Triangle class as the triangle was instatiated properly as shown by the screenshot below.
+From doing this, I could look at other parts of the code to check - testing my programme in parts an efficient way to test.
+</p>
+<img class="img-responsive" src="assets/img/s5test1a.png" height=400  alt="A test for sprint 5">
+
+<h3>Test Two: Test my triangle button</h3> 
+<p>I encounted a problem which was that no matter which direction I dragged the mouse, from the mouse position of mouse down, it would create a triangle
+	to the left, and down a bit. This problem is due to my x,y,w,h values inside the Triangle class not relating to where mouse is clicked or when mouse is released.
+	The valeus for width and height were written as absoulte values, so the triangle won't be created in the designated position. To fix this I took away the absoulte
+	value code. Now it works properly. As you'll see in a upcoming video.
+</p>
+<video class="center" controls>
+	<source src="assets/vids/s5test1.mov" type="video/mp4">
+  </video>
+
+<h3>Test Three: Testing a polygon class works</h3> 
+<p>The Polygon class works. Now I was to test to get it into a button.</p>
+<img class="img-responsive" src="assets/img/s5test3.png" height=400  alt="A test for sprint 5">
+
+
+<h3>Test Three: Testing a polygon button works</h3> 
+<p>The Polygon button works. 
+	<video class="center" controls>
+		<source src="assets/vids/s5test3.mov" type="video/mp4">
+	  </video>
+
+<img class="img-responsive" src="assets/img/s5test3a.png" height=400  alt="A test for sprint 5">
+
+<p> However, I found a problem. This problem was that the polygon wasn't drawn inside the bounding box. To fix this I had to make sure to make the radius half
+	of h or w, depending whether the height or width is smallest. In my video, you see when I drag and drag a bounding box with a small width and a big height, 
+	it will make a polygon based on the large height - making a big polygon. The ideal polygon to be created is one within a square with a side length which is
+	the width of the original bounding box. This ensures that the polygon created is fully inside the bounding box created by the user. To fully understand this idea,
+	I have to understand that a polygon is made using a circle and the radius of this circle. To fix this problem I will have to put conditions on the radius value. 
+	This becomes a problem as the polygon might end up outside the drawing area, like shown in the image above. This happens as if the bounding box is drawn close 
+	to the edge of the drawing area and the radius value used to draw the polygon is big. When this occurs, the polygon can be created outside of the bounding box and
+	therefore, there's a possibility that it could be drawn outside of the drawing area.
+</p>
+
+  <img class="img-responsive" src="assets/img/s5test4.png" height=100  alt="Code for sprint 5">
+  <p>To fix this I had to make my code to account for this. So I made code (as shown below) that when the height (of the bounding box) is smaller than the width (
+	  of the bounding box) it will draw a polygon with a radius half of the height (of the bounding box) which means that the diameter will length h. 
+	  Since h is smaller that w, the polygon will fit into the bounding box well. Then if the width (of the bounding box) is smaller than height (of the 
+	  bounding box) then the code will draw a polygon with radius hald of the width (of the bounding box) which means that the diameter will be a size of w.
+	  This means that the polygon will fit inside the bounding box dragged by the user. And if the bounding box doesn't fit either of these conditions, it will 
+	  mean that the bounding box has an equal height and width. In this case, the radius will be half h, which is also equililent to half w. This will
+	  also have a accuractly sized polygon inside the bounding box.
+	  
+  </p>
+
+  <img class="img-responsive" src="assets/img/s5test3b.png" height=250  alt="A test for sprint 5">
+
+  <p>After analysing this solution, I found that there too much repition within the code. because I have 3 conditions and then create
+	  a new polygon and then push it into the object list for each condition. It would be better to have a more functional code. I'm thinking 
+	that to do this I would have a condition on only one of  the variables, this would be R (the radius) as this is the only value I was changing
+in the code. This worked better, as you can see below. I was having problems testing  a condition on R in controlobject.js, so I decided to try a 
+new approach and add this variable in my Polygon class. The code is shown below. For this new code, I had to define the variabe R inside class. Since 
+R depends on the values of the width and height of the bounding box I had to pass this through the code. To do this I added h and w to the 
+parameters to the class and the include these values in the constructor as well as put this.w and this.w inside the code instatiating the polygons inside 
+control.object.js. </p>
+
+<img class="img-responsive" src="assets/img/s5test3c.png" height=150  alt="A test for sprint 5">
+
+
+
+
+<h3>Iterative Decision</h3>
+<p>However as a polygon could mean so many shapes depending on the amount of sides the polygon has. For example, a six
+	sideed polygon is a hexagon while a 10 sided polygon is a decagon. For this reason I think it makes the mst sense for the user that they
+	choose the amount of sides the polygon would have. If I do this the user won't have to wonder what type of polygon they'll get when clicking on
+	this button.
+</p></p>
+
+<h4>Option One:</h4>
+<p>This option is to code 3 different buttons each with a different n value which I will distinguish in the code when instatiating the button. To do this I had 
+	buttons like Pentagon, Hexagon and Heptagon and I have manually change the n value for each button. The outcome for this is acceptable, so this is a valid option.
+</p>
+<img class="img-responsive" src="assets/img/s5iterativedecision1.png" height=400  alt="A plan for iterative decision for sprint 5">
+<img class="img-responsive" src="assets/img/s5iterativedecision1b.png" height=200  alt="Code for iterative decision for sprint 5">
+
+<video class="center" controls>
+	<source src="assets/vids/s5testO1.mov" type="video/mp4">
+  </video>
+
+<br>
+<h4>Option Two:</h4>
+<p>For this solution I create a new button set that is solely for different polygon options. This option is more complex than option 1 as I need to 
+	create more button code, as there needs to be a different static variable. This is becasuse if these buttons with '4', '5' and '6' (ect) were in 
+	same button set as the other shape buttons, then if the user clicks on one of the number of sides options it will deselect the polygon being selected.
+	This is due to the static object making sure only one button being selected at one time. 
+	
+	Because these buttons operate a little differently I want there to
+	be a little bit of a distinction from these buttons compared to the other buttons. To do this I would like to have a gap, however that's not possible
+	with the code for the button placement in main.js. So I will have to improve this code as well for this option - however, this would be something I would've had
+	to do later on anyway.
+	
+</p>
+<img class="img-responsive" src="assets/img/s5iterativedecision2a.png" height=400  alt="A plan for iterative decision for sprint 5">
+<img class="img-responsive" src="assets/img/s5iterativedecision2b.png" height=400  alt="Code for iterative decision for sprint 5">
+
+<h3>Testing the button selection works</h3>
+<p>I created a new class called 'Polygon_buttons' that will be used to create the buttons that have the side length options for the polygon.
+	I had to create a new side length buttons for this. It makes sense that these side length buttons to be smaller. For the new 'Polygon_buttons'
+	class I had to make 2 new static variables; 1 to make sure that only one of these side length buttons can be selected at one time, and the other
+	to make sure .......
+</p>
+
+<video class="center" controls>
+	<source src="assets/vids/s5testO2.mov" type="video/mp4">
+  </video>
+
+  <p>As you can see that my new 'Polygon_buttons' class works as these side buttons can be selected when the shape buttons are also selected - which is
+	  a crucial part of this option. As I haven't connected the actual instaitation of different sized polygon to the buttons yet. But a problem that I do see 
+	  is that the side length button is still selected when the user decides to draw another shape. Although this is alright in theory because the shape is 
+	  still drawn normally, but it is a bit confusing and not ideal.
+
+  </p>
+
+  <h3>Testing the side length buttons works</h3>
+  <video class="center" controls>
+	<source src="assets/vids/s5testO2a.mov" type="video/mp4">
+  </video>
+
+  <p> I connected the 'Polygon_buttons.Sides' static variable to the instatiation of the polygon. As you can see when I click on the Polygon button and then 
+	  a side length, it creates the correct polygon. If the user only clicks a side length and not the polygon button, no shape is created if the user tries; this is 
+	  what we want as we don't know if the user actually wants a polygon. If the user draws a polygon and the goes to select another shape, the number of sides button 
+	  will remain selected - but this is fine because it draws the new shape and not a polygon. Also, if the user goes back to drawing polygons it will automatically draw
+	  polygons with the number of sides.
+
+  </p>
+
+
+
+
+<h4>Decsion:</h4>
+<p>I chose option 2 because it is a better solution in many ways. This way I can easily add another polygon button for a side length without adding too many lines of code. 
+	This is because the number of sides relates to the number on the button, and this is connected to the 'n' side lengths. While option one depends on
+	each button being pushed to a list seperately, while in option 2 this can be done in a loop (more efficient and functional).
+
+<br>
+However, option two makes the buttons seem more asthetically pleasing on the page, as option 2 gives the option for the number of sides in smaller buttons. This is better than option 1, which 
+has seperate large buttons for each polygon options which contributes to the clutter of the page. Going into further sprints i can see this becoming a bigger problem,
+so I should do what I can do now to minimise this.
+</p>
+
+
+
+
+
+
+<h3>Test Two:</h3>
+<video class="center" controls>
+	<source src="assets/vids/s5test2.mov" type="video/mp4">
+  </video>
+
+<br><br><h2>REFLECTION</h2> 
+
+
+<br><br<br>
 
 
 
