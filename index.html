@@ -41,6 +41,8 @@
 					<li><a href="#6">Sprint 6</a></li>
 					<li><a href="#7">Sprint 7</a></li>
 					<li><a href="#8">Sprint 8</a></li>
+					<li><a href="#9">Sprint 9</a></li>
+					<li><a href="#10">Sprint 10</a></li>
 					<li><a href="#0">Other</a></li>
 				</ul>
 			</div>
@@ -732,7 +734,6 @@ br><br><hr>
 	issue.
 </p>
 
-
   <video class="center" controls>
 	<source src="assets/vids/s7test1a.mov" type="video/mp4">
   </video>
@@ -746,14 +747,201 @@ br><br><hr>
 
 
 <p>I'm also interested to take away the bounding box for the line as there's no reason to have it as it's drawing a line not a shape. This is because 
-	the user can use where their cursor is to figure out where the line is going to end up. This also makes my programme cleaner.
+	the user can use where their cursor is to figure out where the line is going to end up. This also makes my programme cleaner. I did this by adding 
+	a condition on the drawing 'drawRectGuide' inside the draw function inside 'controlobject.js'. This condition was the static variable 'Button.Shape' 
+	had to equal the shapes, the shapes where I wanted the retangle guide like Polygon and rectangle ect.
 </p>
 
 <br><br><h2>REFLECTION</h2> 
+<img class="img-responsive" src="assets/img/s7test5.png" width=400 alt="Drawing for sprint 7">
+<p>This is a picture that a user could create. However, there is a lack of curved lines. This is why I want to work on a brush button, so the user 
+	could've created a better mouth and eyes as they would have access to curved/wiggly lines. </p>
 
 
-<br><br<br><br<br><br<br><br<br><br<br><br>
+
+<br><br><br>
+<br><br><hr>
+<h1><a id="8">Sprint Eight </a></h1>
+<p><a href="" class="btn"  target="_blank">Link to the Canvas Page</a></p>
+
+
+
+<h2>AIM</h2>
+<p> To create a brush button, with different lengths
+</p>
+
+<br><br><h2>PLAN</h2> 
+<img class="img-responsive" src="assets/img/s8plan.png" alt="The planning sheet for sprint 8">
+
+
+<br><br><h2>KANBAN BOARD</h2> 
+<img class="img-responsive" src="assets/img/s8kanban.png" alt="The kanban sheet for sprint 8">
+
+
+<br><br><h2>TESTING</h2> 
+<h3>Test One: Testing what brush will draw for a single moment of time</h3>
+
+<img class="img-responsive" src="assets/img/s8test1.png" height=400 alt="The kanban sheet for sprint 8">
+
+
+
+<h3>Test Two: Test the button connects</h3>
+<p>I can see that the repeated circles that make up the brush work well. For the button to work I had to make sure to put the code to 
+	instatiate the brush class was in the 'mMove' function as the circles need to called when the mouse moves not just when the move is clicked 
+	and draged. The brush works well and the different colours work as well.
+	<br>
+
+	<video class="center" controls>
+		<source src="assets/vids/s8test2.mov" type="video/mp4">
+	  </video>
 	
+	The problem I found that I wasn't able to limit the brush to keep inside the drawing area. 
+</p>
+<video class="center" controls>
+	<source src="assets/vids/s8test3.mov" type="video/mp4">
+  </video>
+
+
+  <p>I decided to see if this was a problem for any of the other shapes. You can see that the other shapes kept inside the 
+	  drawing area. From this I can conclude that this is a problem with only the brush. Looking at what is different from the brush compared 
+	  to the other shapes, it's the fact that the brush is placed in the 'mMove' function and not 'mUp'. So I know I have to fix something involving  
+	  'mMove'. 
+	  <br>
+	  The problem arised due to the fact that the inBoundsCheck, that runs when mouse is pressed down, is using the exact coordinates where 
+	  the mouse was clicked down. This is because I set the coordinates (this.xMouseStart, this.yMouseStart) and returned true or false depending 
+	   whether or not they are inside the drawing area. This works for the other shapes because for the shape to be created they have to click inside 
+	   the drawing area, secondly, I have code that makes sure that the values (this.w and this.h) used to create the shapes will never be larger than the boundaries. So this 
+	   solution only works the shapes and not the brush is because I don't use this.w and this.h to create the brush.
+	   <br>
+	   To fix this I put more conditions that have to occur before the brush is instaitated. As well as making sure the Brush button had to be selected 
+	   and the mouse was down, the inBoundsCheck has to return true for the current positions of the mouse (x and y coordinates). This way, the brush (the small circles) 
+	   will stop creating when the mouse goes out of the drawing area or if they lift their mouse. You can see the brush finally working properly.
+	   <br>
+
+	   <video class="center" controls>
+		<source src="assets/vids/s8testaa.mov" type="video/mp4">
+	  </video>
+	  <p>I also tested the undo and clear all buttons here. The clear all works perfectly. But it clearly shows a limitation of the brush, which is that 
+		  it can not be easily undo'd. This is because each circle created within the brush class is an object, therefore, only one circle (of the line drawn 
+		  by the brush) is removed at one time. However, as seen by the test it doesn't take too long to remove a long brush line if a user needs to.
+		  Although redesigning this part of my project would be a huge task and isn't a priority right now. Comparing the 
+		  pros and cons of having a brush feature, I can conclude that giving the user's the opportunity to use this brush is more important that this small flaw. 
+		  My program is still very usable and it may just take a little bit more time for a user if they make a mistake.
+	  </p>
+
+  </p>
+ <br>
+
+ <h3> Test 4: Looking at the line</h3>
+ <p>After completing a lot of testing for the brush, I noticed that it is quite a bit confusing if there is no bounding box for the line. However, 
+	 I still didn't like the look of the line with a bounding box. Because I this I seeked to find another solution. I decided that it would 
+	 be better if the user could see the line that would be drawn before the line is instatiated and an element of the page. 
+ </p>
+  <p>I added this code. Which means that if the user selects Line, the code will create line that will represent the line that will be 
+	 instatiated when the user's click goes up.
+  </p>
+ <img class="img-responsive" src="assets/img/s8code.png" height=200 alt="code for sprint 8">
+ 
+ <video class="center" controls>
+	 <source src="assets/vids/s8test4.mov" type="video/mp4">
+   </video>
+ 
+
+
+ <br>
+
+
+
+<h3>Iterative Decision</h3>
+<p>I want to make sure that the user has options of different sized widths for the brush. It is apparant there there is more than 1 way of doing this.</p>
+
+<div class="container">
+	<div class="col">
+<h4>Option 1</h4>
+<p>Option 1 is to have a range of circle buttons that will determine the width of the brush. These circle buttons will need a new class and a new static variable
+	that makes sure that only 1 brush option button can be selected at the same time, independent of the shape buttons.
+	I think that having visual representations of how big the brush size will be good. Therefore these brush option buttons will be in a circle shape. 
+	I will definetely need to make a new class for these circle buttons, as the code will be very different compared to square buttons
+</p>
+<img class="img-responsive" src="assets/img/s8iterativedecision.png" height=400 alt="The plan for iterative decision in sprint 8">
+
+<p>Plan of the circle button:</p>
+<img class="img-responsive" src="assets/img/s8iterativedecision.png" height=400 alt="The plan for iterative decision in sprint 8">
+
+<p>Code:</p>
+<img class="img-responsive" src="assets/img/s8iterativedecisiong.png" height=400 alt="The code for iterative decision in sprint 8">
+
+<video class="center" controls>
+			<source src="assets/vids/s8testaaa3.mov" type="video/mp4">
+		  </video>
+
+		  <p>As you can see all the buttons work well, and if the user only pushes the Brush button they'll draw with a brush that is all the same 
+			width as 'M'. And then the brush width selected will stay selected even if the user selects on another shape. This is what I want, 
+		as it makes it easier if the user wanted to use the large brush width all the time instead of the default medium brush width.
+	<br>
+	Although this is the same kind of idea as the polygon option (number of sides) buttons, it is different. A static varaible carries the text of the button. 
+	Therefore for the polygon option buttons, i was able to put this static varaible straight into the instatiation code as a variable. However, for brush length this was 
+	not possible as the text of the button is either S, M or L. And these sizes then correlate to the brush width. Because of this I had to adapt my code 
+	to fit this.
+	</p>
+
+
+	</div> 
+
+	<div class="col">
+		<h4>Option 2</h4>
+		<p>Option 2 is to have 5 square buttons that will determine the size of the brush. I will add 5 more options in controlobject.js, 
+			and for each I will change the radius of the circle. This is a more straightforward version and I will be able to carry this plan out 
+		quickly as I can connect the new buttons with the already made button class in buttons.js.</p>
+		<img class="img-responsive" src="assets/img/s8iterativedecisiona.png" height=400 alt="The plan for iterative decision in sprint 8">
+		
+		<img class="img-responsive" src="assets/img/s8iterativedecision1aa.png" height=400 alt="The code for iterative decision in sprint 8">
+		
+		<video class="center" controls>
+			<source src="assets/vids/s8testaaa.mov" type="video/mp4">
+		  </video>
+	
+		<p>As you can see all the buttons work well, and if the user only pushes the Brush button they'll draw with a brush that is all the same 
+			width as 'M'. However, the user would've had to test all the buttons first to see how big the brushes actually are, which is a big pain 
+			especially if the user is in the middle of a big drawing project.
+		</p>
+		<br><br<br><br<br>
+		<br><br<br><br<br>
+		<br><br<br><br<br>
+
+			</div> 
+		
+
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	
+<h4>Decision</h4>
+	<p>I think option 1 is the better option because it is more functional as it would be super easy to add more buttons on that allow the user 
+		to have different bursh widths. Secondly, it is better visually as the user will be able to see how big the brush is without having to go on a test 
+		run first.
+		<br> 
+	</p>
+
+<h3>Test 3: Testing the brush</h3>
+<p>I found that my brush goes over the edge of the drawing area. </p>
+
+<img class="img-responsive" src="assets/img/s8code11.png" height=200 alt="problem for sprint 8">
+
+<p>To fix this I made sure to clip whatever that is not inside the drawing area. To do this I added 'ctx.save()', 'ctx.clip()' and 'ctx.restore()' 
+	to the update function in control.object.js. I also think that this will help with the line, as it also had a variation of this problem where a small section 
+	of the line would be seen to go
+</p>
+<br>
+<h3>Test 4:</h3>
+<p>I couldn't find anything wrong with this version. I think that I could add a new button which gave the user a chance to do something new. 
+	For this reason,next sprint I will work on a rotatng shape.
+</p>
+<video class="center" controls>
+	<source src="assets/vids/s88test.mov" type="video/mp4">
+  </video>
+
+
+<br><br<br><br<br>
 
 
 
