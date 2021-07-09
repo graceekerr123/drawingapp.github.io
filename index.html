@@ -762,7 +762,7 @@ br><br><hr>
 <br><br><br>
 <br><br><hr>
 <h1><a id="8">Sprint Eight </a></h1>
-<p><a href="" class="btn"  target="_blank">Link to the Canvas Page</a></p>
+<p><a href="sprint8/sprinteight.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
 
 
 
@@ -943,7 +943,123 @@ br><br><hr>
 
 <br><br<br><br<br>
 
+<br><br><br>
+<h1><a id="9">Sprint Nine </a></h1>
+<p><a href="sprint9/sprintnine.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
 
+
+
+<h2>AIM</h2>
+<p> To create a diamond button
+</p>
+
+<br><br><h2>PLAN</h2> 
+<p>A diamond is just a rotated square, so I know that i'll have research about how to rotated shapes. I looked at w3schools as shown below to 
+	gather a general idea about how to draw a rotated object.
+</p>
+
+<img class="img-responsive" src="assets/img/s9plan11.png" alt="The planning sheet for sprint 9">
+
+<img class="img-responsive" src="assets/img/s9plan.png" alt="The planning sheet for sprint 9">
+
+
+
+<br><br><h2>KANBAN BOARD</h2> 
+<img class="img-responsive" src="assets/img/s9kanban.png" alt="The kanban sheet for sprint 9">
+
+
+<br><br><h2>TESTING</h2> 
+<h3>Test One: Testing that the diamond class works</h3>
+<p>I tried to instantiate a single diamond. Something went completely wrong and the whole page got rotated. This is because inside the Diamond 
+	class code I never saved and 
+	restored it. So all the page element got permantently rotated instead of just the rotation for the creation of the diamond.
+</p>
+<img class="img-responsive" src="assets/img/1.png" height=400 alt="problem for sprint 9">
+<p>To fix this I added 'ctx.save()'' to the begining of the draw function inside the Diamond class, and the 'ctx.restore()' to the end of the 
+	draw function inside the Diamond class. This makes sure that the orginal orientation of the page is saved so it then can be restored to this original 
+	orientation once the diamond is created.
+</p>
+
+<h3>Test Two: Testing the Diamond button works</h3>
+<p>The diamond works well. However, there is not bounding box which is something I think would add value to my drawing page program.
+	I also noticed that the save, clip and restore commands I added to the upadte function inside the controlobject.js last sprint is useful here as well.
+	This is because it clips off the end of any shapes that go outside of the drawing area.
+</p>
+<video class="center" controls>
+	<source src="assets/vids/s9test1.mov" type="video/mp4">
+  </video>
+<p>The bounding box was added sucessfully, as shown below. However, I can see that the diamond now doesn't fit inside of the bounding box properly.</p>
+<video class="center" controls>
+	<source src="assets/vids/s9test2.mov" type="video/mp4">
+  </video>
+
+<h3>Solution to making sure the diamond is created inside the bounding box</h3>
+<img class="img-responsive" src="assets/img/1.png" height=400 alt="problem for sprint 9">
+<p>I tried to fix it using a point to point drawing way to draw the diamond. It didn't work</p>
+<video class="center" controls>
+	<source src="assets/vids/s9test12.mov" type="video/mp4">
+  </video>
+
+
+<br><br><h2>REFLECTION</h2> 
+
+
+<br><br<br><br<br><br<br><br<br>
+
+
+
+<h1><a id="10">Sprint Ten </a></h1>
+<p><a href="sprint10/sprintten.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
+
+<h2>AIM</h2>
+<p> To create a rotating ellipse button
+</p>
+
+<br><br><h2>PLAN</h2> 
+<img class="img-responsive" src="assets/img/s10plan.png" alt="The planning sheet for sprint 10">
+
+
+<br><br><h2>KANBAN BOARD</h2> 
+<img class="img-responsive" src="assets/img/s10kanban.png" alt="The kanban sheet for sprint 10">
+
+
+<br><br><h2>TESTING</h2> 
+<h3>Test One:Testing the rotating ellipse itself</h3>
+<p>What I supsect happened here was that ellipse kept getting bigger and bigger. This is because I increased the counter for 'xR' and 'yR'. To fix 
+	this I made sure that the counter was only impacting the angle used to create the ellipse.
+</p>
+<img class="img-responsive" src="assets/img/s10test.png" alt="The test for sprint 10">
+
+<p>I changed this and it worked.</p>
+<video class="center" controls>
+	<source src="assets/vids/s10test1.mov" type="video/mp4">
+  </video>
+
+  <h3>Test Two:Testing the button for the rotating ellipse works</h3>
+<p> It works perfectly. Also, if the rotating ellipse goes over the boundary of the drawing area, the save, clip and restore also works here to 
+	clip the shape so it's inside the drawing area. Fortunately, the rotating ellipse works with the undo button. However, I would like to make sure that there's a bounding box for what the original position of the 
+	the ellipse would look like.
+</p>
+<video class="center" controls>
+	<source src="assets/vids/s10test2.mov" type="video/mp4">
+  </video>
+
+  <p> With bounding box</p>
+  <video class="center" controls>
+	<source src="assets/vids/s10test3.mov" type="video/mp4">
+  </video>
+
+
+
+<h3>Test Two:</h3>
+<video class="center" controls>
+	<source src="assets/vids/s2test2.mp4" type="video/mp4">
+  </video>
+
+<br><br><h2>REFLECTION</h2> 
+
+
+<br><br<br><br<br>
 
 
 
@@ -1043,6 +1159,7 @@ Option 3) Create a clipping mask so everything that gets drawn after the canvas 
 <h1><a id="O">Other </a></h1>
 
 <h2>PROJECT BACKLOG</h2>
+<p>Make creating buttons more efficient.</p>
 
 <img class="img-responsive" src="assets/img/pb.png" alt="The project backlog">
 
