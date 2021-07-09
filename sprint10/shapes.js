@@ -170,53 +170,13 @@ class Brush{
 
 }
 
-/*
-class Diamond{
-    constructor(xS, yS, w, h, c){
-        // centre of diamond, x coordinate
-        this.xC = xS + w/2; 
-        // centre of diamond, y coordinate
-        this.yC = yS + h/2; 
-        //calculation for side length using w and h
-        this.side = (w + h)/2; 
-        this.fill = c;
-}
-    
-    update(){
-        this.draw();
-    }
-    
-    draw(){
-        ctx.save()
-        ctx.translate(this.xC, this.yC);
-        // rotate the rectangle, so it will be a diamond
-        ctx.rotate(45*Math.PI/180); 
-        ctx.beginPath();
-        ctx.rect(0 - this.side/2, 0 - this.side/2, this.side, this.side); 
-        ctx.fillStyle = this.fill;
-        ctx.fill();
-        ctx.restore()
-
-        }
-}
-
-*/
-
-
 class Diamond{
     constructor(xS, yS, w, h, c){
         this.x = xS;
         this.y = yS;
         this.w = w;
         this.h = h;
-        // centre of diamond, x coordinate
-        this.xC = xS + w/2; 
-        // centre of diamond, y coordinate
-        this.yC = yS + h/2; 
-        //calculation for side length
-        //this.side = (w + h)/2; 
         this.fill = c;
-        console.log("diamond2 selected")
 }
     
     update(){
@@ -224,13 +184,7 @@ class Diamond{
     }
     
     draw(){
-        console.log("Diamond2 drawing")
-        ctx.save()
-        ctx.translate(this.xC, this.yC);
-        // rotate the rectangle, so it will be a diamond
-        ctx.rotate(45*Math.PI/180); 
         ctx.beginPath();
-        //ctx.rect(0 - this.side/2, 0 - this.side/2, this.side, this.side); 
         ctx.moveTo(this.x + this.w/2, this.y)
         ctx.lineTo(this.x+this.w, this.y+this.h/2)
         ctx.lineTo(this.x +this.w/2, this.y+this.h)
@@ -238,11 +192,8 @@ class Diamond{
         ctx.closePath();
         ctx.fillStyle = this.fill;
         ctx.fill();
-        ctx.restore()
-
         }
 }
-
 
 class RotatingEllipse{
     constructor(x,y,w,h, fillcolour){
@@ -270,3 +221,4 @@ update(){
     }
 
 }
+
