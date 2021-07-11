@@ -43,6 +43,7 @@
 					<li><a href="#8">Sprint 8</a></li>
 					<li><a href="#9">Sprint 9</a></li>
 					<li><a href="#10">Sprint 10</a></li>
+					<li><a href="#11">Sprint 11</a></li>
 					<li><a href="#0">Other</a></li>
 				</ul>
 			</div>
@@ -55,7 +56,7 @@
 	<p> To make a web based drawing application which allows the user to draw shapes and lines and to manage colours.
 		This project needs to have a canvas environment and could include having animated drawing elements. 
 		This would be designed for 7 and 8 students to help make geometric shapes and patterns exciting so they'll be more 
-		enthused for the Maths subject.	</p>
+		enthused for Math.	</p>
 <br><hr>
 
 
@@ -66,9 +67,15 @@
 <p>To allow the user to click with their mouse and then drag to draw a rectangle.</p>
 
 <br><br><h2>PLAN</h2> 
-<img class="img-responsive" src="assets/img/s1plan" alt="The planning sheet for sprint 1">
 
+<div class ="container">
+<div class="col">
 
+<img class="img-responsive" src="assets/img/s1plan.png" height=600 alt="The planning sheet for sprint 1">
+</div><div class="col">
+<img class="img-responsive" src="assets/img/s1plan1.png" height=600 alt="The planning sheet for sprint 1">
+</div>
+</div>
 <br><br><h2>KANBAN BOARD</h2> 
 <img class="img-responsive" src="assets/img/s1kanban.png" alt="The kanban sheet for sprint 1">
 
@@ -89,7 +96,7 @@
 <br>
 
 <h3>Test Three:</h3>
-<p>I tested all the mouse listeners to make sure they work properly. As you can see, the consol log shows that they are.</p>
+<p>I tested all the mouse listeners to make sure they work properly. As you can see, the console log shows that they are.</p>
 <video class="center" controls>
 	<source src="assets/vids/s1test1.mov" type="video/mp4">
   </video>
@@ -97,11 +104,9 @@
 <h3>Test Four:</h3>
 <P>I tested that the outline for the rectangle worked correctly. It was good that the rectangle outlined appeared, but I did
 	 find a problem with this test. This problem happens when the drag extends beyond the boundaries of the canvas, as beyond the boundaries 
-	 the mouse isn't registered because there is no mouse listeners on this part of the screen. In the test, when the user tries to draw a 
-	 rectangle outside of the canvas, the rectangle guide remains the same until the mouse returns to inside the boundaries again.
-	 
-	 the code doesn't realise this as mouse up 
-and the program goes
+	 the mouse isn't registered because there is no mouse listeners on this part of the screen. So when the user tries to draw a 
+	 rectangle outside of the canvas, the rectangle guide remains the same until the mouse returns to inside the boundaries again. 
+
 </P>
 <video class="center" controls>
 	<source src="assets/vids/s1test2.mov" type="video/mp4">
@@ -109,8 +114,8 @@ and the program goes
 
 
 <br><br><h2>REFLECTION</h2> 
-<p>I think that this sprint went smoothly as I didn't encounter many problems while getting to the final base product which is sprint 1. Sprint one
-	 is the simpliest application i could possibly make. Now we can improve through the subsequent sprints.
+<p>I think that this sprint went smoothly as I didn't encounter many problems. Sprint one
+	 is very simple and I can improve more through the subsequent sprints.
 This was a very important sprint because I was able to get some major elements of my wed based drawing application working such as the canvas,
 and secondly the ability to draw a rectangle guide and rectangle. Through testing it became apparant that the code that I have at the moment
 for the canvas isn't suffient for a web application to go out into the real world. It's clear that in a later sprint that I will have to 
@@ -121,11 +126,11 @@ the canvas which will make my application look more structured and professional.
 
 <br><br>
 
-A plus on working on this next is that it will minimise the problem of the mouse not being registered outside of the canvas. This is because
+Sprint 2, working on a drawing page, is great because this will minimise the problem of the mouse not being registered outside of the canvas. This is because
 having a separate box inside the whole canvas indicates to the user that they're expected to draw all the shapes inside the smaller box (the 
-drawing area) instead of the canvas. And due to the fact that mouse listeners are on the canvas as whole then if the user happens to go over the 
-drawing area outline the rectangle will still draw the shape (although I predict I will have to code a function to make sure the shape stays inbounds)
-instead of not updating the rectangle shape like before. The not updating of the shape outline will still occur if the user tries to draw the shape from the drawing box to outside
+drawing area) instead of anywhere on the canvas. And due to the fact that mouse listeners are on the canvas as whole then if the user happens to go over the 
+drawing area outline the rectangle will still draw the shape (although I predict I will have to code a function to make sure the shape stays inbounds). 
+The not updating of the shape outline will still occur if the user tries to draw the shape from the drawing box to outside
 to the canvas and outside again to the document body. However, sprint 2 makes it less likely that this problem will occur for a regularly abiding user.
 </p>
 
@@ -140,7 +145,7 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 </p>
 
 <br><h2>PLAN</h2> 
-<img class="img-responsive" src= "assets/img/s2kanban.png" alt="The planning sheet for sprint 2">
+<img class="img-responsive" src= "assets/img/s2kanban.png" height=600 alt="The planning sheet for sprint 2">
 
 
 <br><br><h2>KANBAN BOARD</h2> 
@@ -165,9 +170,8 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
   <p>I have two possible solutions. This first was to run 'update()' inside the 'down' function.... This is bad because essentially
 	  'down()' will run twice which is not very efficient.
   </p>
-  <img class="img-responsive" src="assets/img/s2test2.png"  height=400 alt="The is a screenshot for sprint 2">
   <p>My second solution is to reset w and h to 0 inside the 'down' function. This is good becuase it fixed the problem. It is a better
-	  solution that my first solution as it's more efficient as it makes sure that my program only needs to run once.
+	  solution that my first solution as it's more efficient as it makes sure that my program only needs to run once. I chose the second soultion.
   </p>
   <img class="img-responsive" src="assets/img/s2test3.png"  height=400 alt="The is a screenshot for sprint 2">
 
@@ -177,7 +181,10 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 <br><br>
 <h3>Test Two:</h3>
 
-<p>Test the boundraries. It works</p>
+<p>Test the boundraries. It works. I clicked on various parts of the screen particularly focusing on and around the boundrary of the 
+	drawing area and the whole canvas. I can tell my boundary check is working properly because whenever I click inside the drawing page, even 
+	close the barrier, it will return true. And then even 1 px outside of the boundary, the code will reture false (as it is not inside the drawing area).
+</p>
 
 <video class="center" controls>
 	<source src="assets/vids/s2test2.mov" type="video/mp4">
@@ -187,50 +194,83 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
   <br><br>
 <h3>Test Three:</h3>
 <p> I had this problem that the rectangle would still be created if I clicked inside the drawing area and 
-	draged out into the canvas. 
+	draged out into the canvas (not apart of the drawing area).
 </p>
 
 <img class="img-responsive" src="assets/img/s2test4.png" height=400 alt="The is a screenshot for sprint 2">
 
-<p>Test that my click and drag guide and rectangle only works for inside the drawing area.</p>
+<h4>Iterative decision to fix this problem</h4>
+
+<div class="container">
+<div class ="col">
+
+	<img class="img-responsive" src="assets/img/s2testa.png" height=600 alt="The is a screenshot for sprint 2">
+
+</div>
+
+
+
+<div class ="col">
+
+	<img class="img-responsive" src="assets/img/s2testb.png" height=600 alt="The is a screenshot for sprint 2">
+	
+<img class="img-responsive" src="assets/img/s2testc.png" height=200 alt="The is a screenshot for sprint 2">
+</div>
+
+</div>
+
+
+<p>I chose option 2 which aims to keep the xMouse and yMouse values withn the border of the drawing area.</p>
+<p>Test that my click and drag guide and rectangle only works for inside the drawing area. I tested this on every boundary. It works.</p>
 
 <video class="center" controls>
 	<source src="assets/vids/s2test5.mov" type="video/mp4">
   </video>
 
   <p>During this test, I found this problem when the mouse went outside of the canvas entirely and just on the webpage.
-	  The moust wouldn't be registered until it went back on the canvas.
+	  The mouse wouldn't be registered until it went back on the canvas. This is because there are no mouse listeners on the entirety of the webpage. 
+	  However, this is a small flaw so it's put to the bottom of the backlog. It's very clear that shape options and colour management are more important for 
+	  the time being. 
   </p>
 
-  <br><br>
 <br><br><h2>REFLECTION</h2> 
+<p>Doing these tests there isn't any element of creativity yet. I think that while the next sprint nexts to work on another big idea, that it also 
+	needs to be creative too. To satistfy this need I would like to give the user an option. Going on further, I think i also need to work on more shapes because I let the 
+	user chose colours. I think that making sure my sprint focuses on two options, e.g. two shape buttons, will allow my project to reach a mimimum viable product level. I believe 
+	that all the work I put into making sure that the webpage and all the boundaries are working accuractly, allows me to focus on shapes and colours for the majority 
+	of the rest of my project. 
+</p>
 
 
 
-
-
-<br><br><hr>
+<br><hr>
 <h1><a id="3">Sprint Three </a></h1>
 <p><a href="sprint3/sprintthree.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
 
 <h2>AIM</h2>
 <p> To allow the user to change the drag and drop shape. I will make two buttons, one for the rectangle drag a drop (already coded)
 	and the other for an ellipse drag and drop (to be coded), for the user to switch between.
-
-	
-	To have a viable product.
 </p>
 
 <br><br><h2>PLAN</h2> 
-<img class="img-responsive" src="assets/img/s3plan.png" alt="The planning sheet for sprint _">
 
-<p>I have a static variable with button selected, so that if it changes for one button it'll change for
-	all of the buttons.
+<div class="container">
 
-	There will be static variable called Button.Shape. Which will equal either rectangle or ellipse.
-</p>
+	<div class="col">
+
+		<img class="img-responsive" src="assets/img/s3plan.png" height =600 alt="The planning sheet for sprint 3">
+		<img class="img-responsive" src="assets/img/s3planc.png" height =600 alt="The planning sheet for sprint 3">
+
+	</div>
+<div class="col">
+	
+	<img class="img-responsive" src="assets/img/s3planb.png" height = 600 alt="The planning sheet for sprint 3">
+	<img class="img-responsive" src="assets/img/s3pland.png" height =600 alt="The planning sheet for sprint 3">
+		
+	</div>
 
 
+</div>
 
 <br><br><h2>KANBAN BOARD</h2> 
 <img class="img-responsive" src="assets/img/s3kanban.png" alt="The kanban sheet for sprint 3">
@@ -245,9 +285,8 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 <h3>Test One:</h3>
 <p> Testing the button:<br>
 	It is clear that the button was instatiated properly. I also check in inbounds
-	for the button and it is clear that it worked. Something to note is that the outline
-	of the button is not considered inBounds. I did this by using simple code (as shown below)
-	and I think to make it more efficient code, I will make sure to add buttons in a list, also
+	for the button and it is clear that it worked. I using simple code (as shown below)
+	and to make my code more efficient. I will make sure to add buttons in a list, also
 	with another list with the button names in it. The loop will run through the list of the buttons
 	and the list of the button names. This will definetly be more efficient as
 	in the future sprints i'm expecting to have numerous buttons, and therefore, it make sense that 
@@ -260,35 +299,36 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
   </video>
 
   <h3>Iterative Decision</h3>
-  <p>First Choice: to have a varaible defined in the constructure which can be true or false depending on whether or not
+  <p>Option 1: to have a varaible defined in the constructor which can be true or false depending on whether or not
 	  the button is selected. 
+	  <img class="img-responsive" src="assets/img/s3test10.png" alt="The code for sprint 3">
 	  <br>
-	  Second Choice: to have a static variable - so only one button is the chosen button.
-	  <br>
-	  We can see the effectiveness of the first choice in test two. 
+	  Option 2: to have a static variable - so only one button is the chosen button. I have a static variable called 'Button.Clicked' to make it so only one button can be selected at one time.
+	  There will also be a static variable called 'Button.Shape'. Which will equal the text of what's on the button, so either rectangle or ellipse.
   </p>
 
-  <img class="img-responsive" src="assets/img/s3decision1.png" alt="The iterative deicison sheet for sprint 3">
+  <img class="img-responsive" src="assets/img/s3plana.png" height = 350 alt="The planning sheet for sprint 3">
   <img class="img-responsive" src="assets/img/s3decision2.png" alt="The iterative deicison sheet for sprint 3">
 
 <br>
-<h3>Test Two:</h3>
+<h3>Testing option 1:</h3>
 
 <video class="center" controls>
 	<source src="assets/vids/s3test2.mov" type="video/mp4">
   </video>
 
-<p>Testing more than one button at the same time. And testing that the change of colours depending
+<p>Testing more than one button at the same time using the variable 'this.clicked'. And testing that the change of colours depending
 	if the mouse is hovering over the button is working. I'm using the idea of my first choice for this. I was sucessful in making two buttons appear on the page
 	and the hover over the buttons also works. As you ca see from my console log, the false and true is working properly.
 <br>
 	However, there was a problem with the selection of the buttons as when I tried to select a button for the second time. 
 	By this I mean that after already selecting a button and wanting to select the other button, the code wouldn't deselect the first button.
+	<br>
 	It was because of this that I decided that my first choice of the iteraive decison is inherted flawed, as it doesn't
 	deselect buttons when i'm selecting another one. I want to try the static variable. After incorprating the static variable
 	into my code, it seems like it is the better option as it makes sure that only one button is chosen at one point of time.
 <br>
-	The static variable is at the very end after declaring the class. It is called 'Button.Clicked'. This is more practical
+	The static variable is at the very end after declaring the class. It is called 'Button.Clicked'. This is more practical. 
 
 </p>
 
@@ -299,7 +339,8 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 	  <img class="img-responsive" src="assets/img/s3test3.png" height=400 alt="The problem in sprint 3">
 <br>
 	  I then came across another problem, and that is that my ellipse's that I was drawing weren't changing depending
-	  on the movements of the mouse. I fixed this problem by fixing the variables for when I 
+	  on the movements of the mouse and instead a fixed sized ellipse was drawn when I clicked.
+	   I fixed this problem by fixing the variables for when I 
 	  instaitate the Ellipse inside the 'controlobject.js' just before it's pushed to the temp list. 
 	  Before the width and height was defined as 'w' and 'h', and to fix this I changed it to 'this.w' and 'this.h'.These are being updated from the mouse
 	  move function. So the width and
@@ -317,7 +358,7 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 
 
 <br><br><h2>REFLECTION</h2> 
-<p>Big thing is that the shapes can only be only colour. I need colour options. Why not a colour palette at the bottom
+<p> A big thing is that the shapes can only be only colour. I need colour options. Why not a colour palette at the bottom
 	of the page - give a whole list of options. This seems like it's the biggest priority because it's important for the
 	user to have different colours to draw with to foster creativity.
 
@@ -327,6 +368,21 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 
 
 <br><br><hr>
+
+
+<div class="container">
+
+	<div class="col">
+
+
+	</div>
+<div class="col">
+
+		
+	</div>
+
+
+</div>
 
 
 <h1><a id="4">Sprint Four </a></h1>
@@ -1039,7 +1095,7 @@ br><br><hr>
 <p>What I supsect happened here was that ellipse kept getting bigger and bigger. This is because I increased the counter for 'xR' and 'yR'. To fix 
 	this I made sure that the counter was only impacting the angle used to create the ellipse.
 </p>
-<img class="img-responsive" src="assets/img/s10test.png" alt="The test for sprint 10">
+<img class="img-responsive" src="assets/img/s10test.png" height=400 alt="The test for sprint 10">
 
 <p>I changed this and it worked.</p>
 <video class="center" controls>
@@ -1070,7 +1126,7 @@ br><br><hr>
 
 
 <h1><a id=11>Sprint Eleven </a></h1>
-<p><a href="" class="btn"  target="_blank">Link to the Canvas Page</a></p>
+<p><a href="sprint11/sprinteleven.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
 
 
 
@@ -1115,6 +1171,14 @@ br><br><hr>
   </video>
 
 <br><br><h2>REFLECTION</h2> 
+
+
+
+
+
+
+
+
 
 
 

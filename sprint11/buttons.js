@@ -2,6 +2,7 @@ console.log("buttons js called");
 
 class Button{
     constructor(x,y,w,h,text, c1, c2, c3){
+        // variables needed
         this.x = x;
         this.y = y;
         this.w = w;
@@ -18,28 +19,18 @@ class Button{
         // mouse locations starts at 0
         this.xMouse = 0;
         this.yMouse = 0;
-        //  false is the the default setting
+
+        // false is the the default setting for whether the mouse is inbounds or not
         this.inBounds = false;
-        // get rid of this because 'Button.clicked' has been incorprated
-        //this.clicked = false;
     }
 
 
     mClick(e){
-        
         // if we clicked and it's inbound then button has been selected
-    
         if(this.inBounds){
-            //console.log("click inside the boundary");
             //button has been selected
-            
             Button.Clicked = this;
             Button.Shape = this.text;
-            // it will say this 'this is the selected object'
-            // it'll push out a button, if a new one becomes clicked
-
-            //Button.shape = this.text;
-
         }
      
     }
@@ -48,11 +39,8 @@ class Button{
         // update the x and y position variables to be the correct canvas coordinates
         this.xMouse = e.offsetX;
         this.yMouse = e.offsetY;
-        //console.log(this.xMouse);
-        //console.log(this.yMouse);
+        // check if the mouse is in bounds while the mouse is moving
         this.inBounds = this.inBoundsCheck(this.xMouse,this.yMouse, this.x, this.y, this.w, this.h)
-        //console.log(this.inBounds);
-
     }
 
     inBoundsCheck(xM, yM, x, y, w, h){
@@ -68,7 +56,7 @@ class Button{
         this.draw(Button);
     }
 
-
+    // drawing the button
     draw(C){
         ctx.strokeStyle = this.outline;
         ctx.fillStyle = this.fill;
@@ -76,13 +64,12 @@ class Button{
         ctx.beginPath();
         ctx.rect(this.x,this.y,this.w,this.h);
         
-        
         // change colour if mouse is over button
         if(this.inBounds || C.Clicked == this){
             ctx.fillStyle = this.hover;
             ctx.lineWidth = 4;
             ctx.fill();
-            // the fill colour is reset for the text code , so it will be written in the fill colour
+            // the fill colour is reset for the text code, so the words will be written in the fill colour
             ctx.fillStyle = this.fill;
         }
         else{
@@ -92,9 +79,9 @@ class Button{
             ctx.fillStyle = this.outline;
         }
         
-
         ctx.stroke();
 
+        // text on button
         ctx.fillStyle=this.outline
         var myFont = "bold 20px 'Trebuchet MS', Verdana, sans-serif";
         ctx.textBaseline = 'middle';
@@ -109,24 +96,23 @@ class Button{
 
 }
 
+// static variable to make it so only one button can be selected at one time
+Button.Clicked = "";
+// static variable takes the text of the currently selected button
+Button.Shape = "";
+
+
+
 // inherited class which is a copy of the button class and the click and the update functions are overwritten
 // so I can have different static variable for each class
+// 'Polygon_buttons' replaced 'Button' 
  class Polygon_buttons extends Button{
-
     mClick(e){
-        
         // if we clicked and it's inbound then button has been selected
-    
         if(this.inBounds){
-            //console.log("click inside the boundary");
             //button has been selected
             Polygon_buttons.Clicked = this;
             Polygon_buttons.Sides = this.text;
-            // it will say this 'this is the selected object'
-            // it'll push out a button, if a new one becomes clicked
-
-            //Button.shape = this.text;
-
         }
      
     }
@@ -134,11 +120,17 @@ class Button{
     update(){
         this.draw(Polygon_buttons);
     }
-
  }
+
+// static variable for the polygon button set, so only one number of sides can be selected at a time
+Polygon_buttons.Clicked = "";
+// takes the text of the currently selected button
+// static variable for the polygon button set, to store the number of sides for the polygon shape
+Polygon_buttons.Sides = "5";
 
 
 class Circle_buttons{
+    // variables needed
     constructor(x,y,r,text, c1, c2, c3){
         this.x = x;
         this.y = y;
@@ -155,7 +147,8 @@ class Circle_buttons{
         // mouse locations starts at 0
         this.xMouse = 0;
         this.yMouse = 0;
-        // false is the the default setting
+        
+        // false is the the default setting 
         this.inBounds = false;
        
     }
@@ -177,8 +170,6 @@ class Circle_buttons{
         this.yMouse = e.offsetY;
         
         this.inBounds = this.inBoundsCheck(this.xMouse,this.yMouse, this.x, this.y, this.r)
-        //console.log(this.inBounds);
-
     }
 
     // special distance check using pythagoras
@@ -198,16 +189,13 @@ class Circle_buttons{
         this.draw();
     }
 
-
     // draw the button
     draw(){
         ctx.strokeStyle = this.outline;
         ctx.fillStyle = this.fill;
         ctx.lineWidth = 0.5;
         ctx.beginPath();
-        //ctx.ellipse(this.x, this.y, Math.abs(this.r), Math.abs(this.r), 0, 0, 2*Math.PI)
         ctx.arc(this.x, this.y, Math.abs(this.r), 0, 2*Math.PI);;
-        
         
         // change colour if mouse is over button
         if(this.inBounds || Circle_buttons.Clicked == this){
@@ -220,13 +208,14 @@ class Circle_buttons{
         else{
             ctx.fillStyle = this.fill;
             ctx.fill();
-            // fill txt with different colour, this is set for the text code next
+            // fill text with different colour, this is set for the text code next
             ctx.fillStyle = this.outline;
         }
         
 
         ctx.stroke();
 
+        // text on the button
         ctx.fillStyle=this.outline
         var myFont = "bold 15px 'Trebuchet MS', Verdana, sans-serif";
         ctx.textBaseline = 'middle';
@@ -235,23 +224,10 @@ class Circle_buttons{
         ctx.font=myFont;
         // set the text in the middle of the button
         ctx.fillText(this.text, this.x, this.y)
-
     }
     
-
 }
 
-
-// static variable to make it so only one button can be selected at one time
-Button.Clicked = "";
-// static variable takes the text of the currently selected button
-Button.Shape = "";
-
-// static variable for the polygon button set, so only one number of sides can be selected at a time
-Polygon_buttons.Clicked = "";
-// takes the text of the currently selected button
-// static variable for the polygon button set, to store the number of sides for the polygon shape
-Polygon_buttons.Sides = "5";
 
 //static variable for circle buttons, so only one circle button can be selected at a time
 Circle_buttons.Clicked = ""
