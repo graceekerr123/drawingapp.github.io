@@ -50,6 +50,7 @@
 			<div class="content">
 
                 
+				<h1>SORRY HAVEN'T FINISHED QUITE YET, GOTTA UPDATE THIS PLANNING DOC SOME MORE</h>
 
 			
     <h1>Brief</h1>
@@ -328,7 +329,8 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 	deselect buttons when i'm selecting another one. I want to try the static variable. After incorprating the static variable
 	into my code, it seems like it is the better option as it makes sure that only one button is chosen at one point of time.
 <br>
-	The static variable is at the very end after declaring the class. It is called 'Button.Clicked'. This is more practical. 
+	The static variable is at the very end after declaring the class. It is called 'Button.Clicked'. This is more practical. You see the selection 
+	working properly in future tests.
 
 </p>
 
@@ -358,12 +360,16 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 
 
 <br><br><h2>REFLECTION</h2> 
-<p> A big thing is that the shapes can only be only colour. I need colour options. Why not a colour palette at the bottom
-	of the page - give a whole list of options. This seems like it's the biggest priority because it's important for the
-	user to have different colours to draw with to foster creativity.
-
+<p> A huge limitation of the program at the moment is that the shapes being clicked and dragged are only one colour. 
+	It would be amazing for the user to have colour options. Firsly, it's boring to only have one colour; secondly, it doesn't give the user 
+	much freedom to be creative if they don't get to chose a colour. A colour palette at the bottom
+	of the page - give a whole list of colour options - is the logical next step. This seems like it's the biggest priority because it's important for the
+	user to have different colours to draw with to foster creativity. So while the other things I've mention like more shape options and the guide not being the best 
+	aren't important compared to not having any colour management system at present.
 	<br>
-	I learnt the importance of static variables which will help me in future sprints.
+	In this sprint I learnt alot, espeically about the importance of static variables which will help me in future sprints. I am expecting a future need 
+	to make another set of buttons (or explore this option) in a future sprint, so it'll be good to remember the lesson I learnt about how effective static 
+	variables are. Creating this button class, although very difficult, will help me in the future making another class about buttons (if I need) as I will have prior knowledge.
 </p>
 
 
@@ -389,7 +395,7 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 <p><a href="sprint4/sprintfour.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
 
 <h2>AIM</h2>
-<p> 
+<p> To create a colour management system to allow the user to chose a variety of colours for their shapes.
 </p>
 
 <br><br><h2>PLAN</h2> 
@@ -403,16 +409,15 @@ to the canvas and outside again to the document body. However, sprint 2 makes it
 
 
 <br><br><h2>TESTING</h2> 
-<h3>Test One:</h3>
-<p>Testing that two swatches work:
-<br>
-This was alright because Swatches are very similar to buttons. So I learnt from all my mistakes I made in sprint 3 while
+<h3>Test One - Testing that two swatches work:</h3>
+<p>
+The process of writing the code was alright because Swatches are very similar to buttons. So I learnt from all my mistakes I made in sprint 3 while
 creating two interactive buttons, and applied this while making swatches. A big part of this was reconigising the importantance
 of static variables from very early on in the sprint. I learnt from the previous sprint that static variables are crucical 
-for interactive spaces/area (IS THAT THE RIGHT WORD?) on the canvas as if the button or swatch leads to a particiular action, 
-then we need a swatch to make sure that the action is always true for each interactive area that is clicked on. (DOES THIS MAKES SENSE?)
-As you can see, I had no iterative decision as I knew from the get go that a static variable is the obvious way to go.
-
+for interactive spaces on the canvas. As you can see, I didn't need a iterative decision as I knew from the get go that a static variable is the obvious way to go.
+<br>
+For this test, I clicked on both of the swatches to make sure that each swatch was deselected if another swatch was selected. I also tried to 
+draw a shape, but as you can see the colour of the shapes made didn't change with the swatch selection.
 </p>
 
 <video class="center" controls>
@@ -421,9 +426,10 @@ As you can see, I had no iterative decision as I knew from the get go that a sta
 
 
 
-<h3>Test Two:</h3>
-<p>This will be testing that the two swatches work properly. Ahh perfect so good. But please do explain in detail what
-	is occuring in this test </p>
+<h3>Test Two: Testing that the swatches connected with the controlobject</h3>
+<p>This will be testing that the two swatches work properly and have properly connected with the control object. If they have been connected correctly, 
+	clicking the the swatches will change the colour of the shapes being drawn. This has happened because the ellipses and rectangles that are being 
+	drawn now are green and yellow - the colour of the swatches. However, the next step is to make sure the user has more than 2 colour options. </p>
 <video class="center" controls>
 	<source src="assets/vids/s4test2.mov" type="video/mp4">
   </video>
@@ -479,6 +485,7 @@ are displayed on the screen and that all of these function properly.
 
 <img class="img-responsive" src="assets/img/s4prob1.png" height=400 alt="Iterative deicison for sprint 4">
 
+<p>It works now</p>
 <video class="center" controls>
 	<source src="assets/vids/s4test3.mov" type="video/mp4">
   </video>
@@ -487,19 +494,22 @@ are displayed on the screen and that all of these function properly.
 
 <br><br><h2>REFLECTION</h2> 
 <p>At this point I've coded all the major parts of this program including a drawing area, a choice of shapes and
-	a choice of colours. I think that the next priority it to expand on the options that I already have, espeically
-	the drawing options. Having more shape options seems like a big priority to me as anyone who downloads a drawing app
-	would expect a reasonably variety of drawing options.
-
-	<br>
-	Viable project or something
+	a choice of colours. From the colour management that I completed this sprint, I don't think I'll need to improve on
+	it during this project as it's such a good colour managament system that doesn't have any flaws (from my testing).
+	I think that the next priority it to expand on the shapes options that I already have. Having more shape options seems
+	 like a big priority to me as anyone who downloads a drawing app
+	would expect a reasonably variety of drawing options. Although that what I have at the moment is a viable project that I could release into the real world, 
+	it isn't anything too special at the moment with only two options. Having a wide variety of shape options will attract users and then 
+	more people will learn about Maths and geometric shapes.
 
 	<br>
 	As you can see from one of the testing videos that the drawing area gets filled up pretty fast,
 	I think that it would be helpful to make sure that the user has the option of an undo button which would 
 	erase the shapes they drew. This would make the drawing app better as it would be more flexible as it 
 	would let users to have the option to redraw their shapes and draw more than before. As you can see, I can think of
-	many other features to include
+	many other features to include in my project. I think this will become the next priority after making sure that we have more than 2 
+	shape options. This is because with more than 2 shapes options the drawing area will definetly fill up faster and it will be 
+	a bigger problem (a problem that will need immediate addressing) that needs fixing.
 
 </p>
 
@@ -515,8 +525,6 @@ are displayed on the screen and that all of these function properly.
 <h2>AIM</h2>
 <p> To have options for more shapes and to include options for a range of polygons
 </p>
-
-Smallest of the two values. So if they draw like a long rectangle (long w, smaallist h) it would be h x h to make a s
 
 <br><br><h2>PLAN</h2> 
 <img class="img-responsive" src="assets/img/s5plan.png" alt="The planning sheet for sprint 5">
@@ -536,7 +544,7 @@ Smallest of the two values. So if they draw like a long rectangle (long w, smaal
 <img class="img-responsive" src="assets/img/s5test1.png" height=400 alt="A test for sprint 5">
 
 <p>
-After consol logging I could see it wasn't a problem with the Triangle class as the triangle was instatiated properly as shown by the screenshot below.
+After console logging I could see it wasn't a problem with the Triangle class as the triangle was instatiated properly as shown by the screenshot below.
 From doing this, I could look at other parts of the code to check - testing my programme in parts an efficient way to test.
 </p>
 <img class="img-responsive" src="assets/img/s5test1a.png" height=400  alt="A test for sprint 5">
@@ -544,7 +552,7 @@ From doing this, I could look at other parts of the code to check - testing my p
 <h3>Test Two: Test my triangle button</h3> 
 <p>I encounted a problem which was that no matter which direction I dragged the mouse, from the mouse position of mouse down, it would create a triangle
 	to the left, and down a bit. This problem is due to my x,y,w,h values inside the Triangle class not relating to where mouse is clicked or when mouse is released.
-	The valeus for width and height were written as absoulte values, so the triangle won't be created in the designated position. To fix this I took away the absoulte
+	The values for width and height were written as absoulte values, so the triangle won't be created in the designated position. To fix this I took away the absoulte
 	value code. Now it works properly. As you'll see in a upcoming video.
 </p>
 <video class="center" controls>
@@ -603,7 +611,7 @@ control.object.js. </p>
 
 <h3>Iterative Decision</h3>
 <p>However as a polygon could mean so many shapes depending on the amount of sides the polygon has. For example, a six
-	sideed polygon is a hexagon while a 10 sided polygon is a decagon. For this reason I think it makes the mst sense for the user that they
+	sideed polygon is a hexagon while a 10 sided polygon is a decagon. For this reason I think it makes the most sense for the user that they
 	choose the amount of sides the polygon would have. If I do this the user won't have to wonder what type of polygon they'll get when clicking on
 	this button.
 </p></p>
@@ -624,8 +632,8 @@ control.object.js. </p>
 <p>For this solution I create a new button set that is solely for different polygon options. This option is more complex than option 1 as I need to 
 	create more button code, as there needs to be a different static variable. This is becasuse if these buttons with '4', '5' and '6' (ect) were in 
 	same button set as the other shape buttons, then if the user clicks on one of the number of sides options it will deselect the polygon being selected.
-	This is due to the static object making sure only one button being selected at one time. 
-	
+	This is due to the static variable making sure only one button being selected at one time. 
+	<br>
 	Because these buttons operate a little differently I want there to
 	be a little bit of a distinction from these buttons compared to the other buttons. To do this I would like to have a gap, however that's not possible
 	with the code for the button placement in main.js. So I will have to improve this code as well for this option - however, this would be something I would've had
@@ -648,9 +656,9 @@ control.object.js. </p>
 
   <p>As you can see that my new 'Polygon_buttons' class works as these side buttons can be selected when the shape buttons are also selected - which is
 	  a crucial part of this option. As mentioned, this is due to their being a new class of buttons that is separate to the original shape buttons.
-	I haven't connected the actual instaitation of different sized polygons to the buttons yet. But a problem that I do see 
-	  is that the side length button is still selected when the user decides to draw another shape. Although this is alright in theory because the shape is 
-	  still drawn normally, but it is a bit confusing and not ideal.
+	I haven't connected the actual instaitation of different sized polygons to the buttons yet. I see 
+	  is that the side length button is still selected when the user decides to draw another shape, but this is advantageous because then the next time the user 
+	  wants to draw a polygon the last selected side legnth will still be available. 
 
   </p>
 
@@ -670,20 +678,27 @@ control.object.js. </p>
 
 
 
-<h4>Decsion:</h4>
-<p>I chose option 2 because it is a better solution in many ways. This way I can easily add another polygon button for a side length without adding too many lines of code. 
-	This is because the number of sides relates to the number on the button, and this is connected to the 'n' side lengths. While option one depends on
-	each button being pushed to a list seperately, while in option 2 this can be done in a loop (more efficient and functional).
+<h4>Decison:</h4>
+<p>I chose option 2 because it is a better solution in many ways. Most significantly option 2 is better because it useds a variable (Button.Sides) instead of a literal (e.g. 6 for a hexagon).
+	Option 2 allows me to easily add another polygon button for a side length without adding too many lines of code; all I would do is to create a new button conntecting it to the polygonbuttons set.
+	This is because the number of sides relates to the number (text) on the button, and this is connected to the 'n' side lengths. While option one depends on
+	each button being pushed to a list seperately, while in option 2 this can be done in a loop (more efficient and functional). Also, option 2 is better because it makes the 
+	selection of the number of sides to be independent of the shape selection which gives more input to the user so they can have more creativity - which is what we want.
 
 <br>
 However, option two makes the buttons seem more asthetically pleasing on the page, as option 2 gives the option for the number of sides in smaller buttons. This is better than option 1, which 
-has seperate large buttons for each polygon options which contributes to the clutter of the page. Going into further sprints i can see this becoming a bigger problem,
+has seperate large buttons for each polygon options which contributes to the clutter of the page. Going into further sprints i can see that clutter is becoming a bigger problem,
 so I should do what I can do now to minimise this.
 </p>
 
 
 <br><br><h2>REFLECTION</h2> 
-
+<p>I believe that I made very big improvments in my code this sprint as I added more shape options which really adds to the possibility a user has while using this web application. 
+	I think I should revisit the idea I had last sprint about needing a clear and undo button because it's clearly more of a priority now as the user has so many 
+	shapes to click and drag with that the drawing area does get cluttered quickly. Since I have an adequite amount of shape options and a good colour management, I feel 
+	like I can dedicate my time to other features like a clear and undo button. These buttons will improve my program so much, much more than another shape button 
+	at this point in time.
+</p>
 
 <br><br<br>
 
@@ -697,18 +712,15 @@ so I should do what I can do now to minimise this.
 <p> To have a undo and clear all button.
 </p>
 
-<br><br><h2>PLAN</h2> 
-<img class="img-responsive" src="assets/img/s6plan" alt="The planning sheet for sprint 6">
+<h2>PLAN</h2> 
+<img class="img-responsive" src="assets/img/s6plan.png" alt="The planning sheet for sprint 6">
 
 
 <br><br><h2>KANBAN BOARD</h2> 
-<img class="img-responsive" src="assets/img/s6kanban" alt="The kanban sheet for sprint 6">
+<img class="img-responsive" src="assets/img/s6kanban.png" alt="The kanban sheet for sprint 6">
 
 
-<br><br><h2>TESTING</h2> 
-
-
-
+<br><h2>TESTING</h2> 
 
 <h3>Test One: Testing the selection of the buttons work</h3>
 <video class="center" controls>
@@ -731,7 +743,7 @@ so I should do what I can do now to minimise this.
 	button - as the shapes will only be cleared after I click inside the drawing area after clicking the clear all button.
 	 From this test, I know that there's a delay because the programme is not recognising when the mouse goes up the first time.
 </p>
-<br>
+
 <p>After some more testing, I know that this is because the code for the clear and undo buttons and the code that recognises what 'Button.Clicked' is (inside button.js), are running at the 
 	same time. Along with the fact that the clear all/undo code is place in the 'mUp' function inside the 'controlobject.js' at the moment. For example, for the undo 
 	button, the 'Button.Clicked = "undo"' is reconised at the same time as the 'if Button.Clicked = "undo"' code. Due to this, the result of the 'Button.Clicked = "undo"'
@@ -747,14 +759,16 @@ so I should do what I can do now to minimise this.
 
 <br>
 	<p>I had to make sure to have 'Button.Shape = "";' at the end of each command for clearing or undoing. This is because if 
-		these buttons are not deselected then the code will keep undoing until there is no shapes on the drawing board. And this is something
+		these buttons are not deselected then the code will keep poping the last drawn shape until there is no shapes on the drawing board. And this is something
 		that the user did not ask for.
 	</p>
 	
-	
+	<h3>Reflection</h3>
+	<p>I think the program is looking good at the moment but I do see room for improvment because there aren't that many features right now.
+		Next thing to work on is another feature, I'm thinking that drawing a line would come in handy to the user.</p>
 
 
-br><br><hr>
+<br><hr>
 <h1><a id="7">Sprint Seven </a></h1>
 <p><a href="sprint7/sprintseven.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
 
@@ -765,11 +779,11 @@ br><br><hr>
 </p>
 
 <br><br><h2>PLAN</h2> 
-<img class="img-responsive" src="assets/img/s7plan" alt="The planning sheet for sprint 7">
+<img class="img-responsive" src="assets/img/s7plan.png" alt="The planning sheet for sprint 7">
 
 
 <br><br><h2>KANBAN BOARD</h2> 
-<img class="img-responsive" src="assets/img/s7kanban" alt="The kanban sheet for sprint 7">
+<img class="img-responsive" src="assets/img/s7kanban.png" alt="The kanban sheet for sprint 7">
 
 
 <br><br><h2>TESTING</h2> 
@@ -786,8 +800,10 @@ br><br><hr>
 	<source src="assets/vids/s7test1.mov" type="video/mp4">
   </video>
 <p>The line now works. But it seems like when the line has a thick width (for example, 10) the line could be created pass the boundary 
-	of the drawing area. This means that my solution of making the bounding box not being able to go outside of the drawing area doesn't fix 
-	issue.
+	of the drawing area. This means that my solution, to the problem of the shapes could be made outside the drawin area, 
+	that makes the bounding box not being able to go outside of the drawing area - doesn't fix this problem. 
+	Because as the xMouse and yMouse values are kept within the border of the drawing area, the shapes instatiated using these xMouse and yMouse values 
+	can still go over the boundary. I will keep this problem in mind for later and put it on my backlog.
 </p>
 
   <video class="center" controls>
@@ -797,46 +813,45 @@ br><br><hr>
 
 
 <h3>Test Two:</h3>
-<video class="center" controls>
-	<source src="assets/vids/s2tes2.mov" type="video/mp4">
-  </video>
-
 
 <p>I'm also interested to take away the bounding box for the line as there's no reason to have it as it's drawing a line not a shape. This is because 
 	the user can use where their cursor is to figure out where the line is going to end up. This also makes my programme cleaner. I did this by adding 
 	a condition on the drawing 'drawRectGuide' inside the draw function inside 'controlobject.js'. This condition was the static variable 'Button.Shape' 
-	had to equal the shapes, the shapes where I wanted the retangle guide like Polygon and rectangle ect.
+	had to equal the shapes where I wanted the retangle guide like Polygon and rectangle ect (not line though).
 </p>
 
 <br><br><h2>REFLECTION</h2> 
 <img class="img-responsive" src="assets/img/s7test5.png" width=400 alt="Drawing for sprint 7">
 <p>This is a picture that a user could create. However, there is a lack of curved lines. This is why I want to work on a brush button, so the user 
-	could've created a better mouth and eyes as they would have access to curved/wiggly lines. </p>
+	could've created a better mouth and eyes as they would have access to curved/wiggly lines. 
+<br> 
+However it is important to note that I will keep in mind the problem that occured, that it is possible, even though unlikely, that a shape could disregard the boundary.
+I decided to work on a brush for next sprint because it's another big step in my program, and this problem is only small at the moment. This is because the line isn't 
+very thick at the moment, so it will never go too much past the boundary and isn't causing any problems. All I know is that I will get this problem fixed because I finish this 
+project fully.
+</p>
 
-
-
-<br><br><br>
-<br><br><hr>
+<br><hr>
 <h1><a id="8">Sprint Eight </a></h1>
 <p><a href="sprint8/sprinteight.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
 
 
 
 <h2>AIM</h2>
-<p> To create a brush button, with different lengths
+<p> To create a brush button, and to give the user an option to different widths for the brush
 </p>
 
-<br><br><h2>PLAN</h2> 
+<br><h2>PLAN</h2> 
 <img class="img-responsive" src="assets/img/s8plan.png" alt="The planning sheet for sprint 8">
 
 
-<br><br><h2>KANBAN BOARD</h2> 
+<br><h2>KANBAN BOARD</h2> 
 <img class="img-responsive" src="assets/img/s8kanban.png" alt="The kanban sheet for sprint 8">
 
 
 <br><br><h2>TESTING</h2> 
 <h3>Test One: Testing what brush will draw for a single moment of time</h3>
-
+<p>Perfect</p>
 <img class="img-responsive" src="assets/img/s8test1.png" height=400 alt="The kanban sheet for sprint 8">
 
 
@@ -845,6 +860,7 @@ br><br><hr>
 <p>I can see that the repeated circles that make up the brush work well. For the button to work I had to make sure to put the code to 
 	instatiate the brush class was in the 'mMove' function as the circles need to called when the mouse moves not just when the move is clicked 
 	and draged. The brush works well and the different colours work as well.
+
 	<br>
 
 	<video class="center" controls>
@@ -961,15 +977,13 @@ br><br><hr>
 			width as 'M'. However, the user would've had to test all the buttons first to see how big the brushes actually are, which is a big pain 
 			especially if the user is in the middle of a big drawing project.
 		</p>
-		<br><br<br><br<br>
-		<br><br<br><br<br>
-		<br><br<br><br<br>
+		<img class="img-responsive" src="assets/img/.png" height=700 >
 
 			</div> 
 		
 
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 	
 <h4>Decision</h4>
 	<p>I think option 1 is the better option because it is more functional as it would be super easy to add more buttons on that allow the user 
@@ -979,27 +993,35 @@ br><br><hr>
 	</p>
 
 <h3>Test 3: Testing the brush</h3>
-<p>I found that my brush goes over the edge of the drawing area. </p>
+<p>I found that my brush goes slightly over the edge of the drawing area. This is the same problem I had with the line in the previous sprint, however, with the 
+	brush it's more noticable as it has a bigger width so it can extend over the boundary further.
+</p>
 
 <img class="img-responsive" src="assets/img/s8code11.png" height=200 alt="problem for sprint 8">
 
 <p>To fix this I made sure to clip whatever that is not inside the drawing area. To do this I added 'ctx.save()', 'ctx.clip()' and 'ctx.restore()' 
-	to the update function in control.object.js. I also think that this will help with the line, as it also had a variation of this problem where a small section 
-	of the line would be seen to go
+	to the update function in control.object.js. This code will aslso help with same problem I had with the line.
 </p>
 <br>
-<h3>Test 4:</h3>
-<p>I couldn't find anything wrong with this version. I think that I could add a new button which gave the user a chance to do something new. 
+<h3>Reflection:</h3>
+<p>I couldn't find anything else wrong with this version. I think that I could add a new button which gave the user a chance to do something new. 
 	For this reason,next sprint I will work on a rotatng shape.
 </p>
 <video class="center" controls>
 	<source src="assets/vids/s88test.mov" type="video/mp4">
   </video>
 
+<p>	
+	I think that my Agile process is really improving my ability to continue through these sprints at a quick pace. I can find an example of this at the moment. 
+	The early sprint about making previous shape classes, button classes and connect the buttons up with controlobject.js and testing these elements so I know they 
+	have no bugs whatsoever. This confindence in my previous sprints, that I've recieved through sticking to the thorough testing processes of Agile (testing after each 
+	feature/sprint has been added) have really helped me to write code for this sprint (in making a brush with multiple options) efficiently without many errors.
+	<br>
+	For what to work on next, another shape button would help to expand the program.
+	</p>
 
-<br><br<br><br<br>
 
-<br><br><br>
+
 <h1><a id="9">Sprint Nine </a></h1>
 <p><a href="sprint9/sprintnine.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
 
@@ -1009,7 +1031,7 @@ br><br><hr>
 <p> To create a diamond button
 </p>
 
-<br><br><h2>PLAN</h2> 
+<h2>PLAN</h2> 
 <p>A diamond is just a rotated square, so I know that i'll have research about how to rotated shapes. I looked at w3schools as shown below to 
 	gather a general idea about how to draw a rotated object.
 </p>
@@ -1068,13 +1090,16 @@ br><br><hr>
 
 
 
-<br><br><h2>REFLECTION</h2> 
+<h2>REFLECTION</h2> 
+<p>I am happy to add another shape button to my project as it improves the capabilties of my web program. Improving on this would to make a shape button with a twist, maybe 
+	a shape that spins or something.
+</p>
 
 
-<br><br<br><br<br><br<br><br<br>
 
 
 
+<br><hr>
 <h1><a id="10">Sprint Ten </a></h1>
 <p><a href="sprint10/sprintten.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
 
@@ -1086,7 +1111,7 @@ br><br><hr>
 <img class="img-responsive" src="assets/img/s10plan.png" alt="The planning sheet for sprint 10">
 
 
-<br><br><h2>KANBAN BOARD</h2> 
+<h2>KANBAN BOARD</h2> 
 <img class="img-responsive" src="assets/img/s10kanban.png" alt="The kanban sheet for sprint 10">
 
 
@@ -1111,20 +1136,21 @@ br><br><hr>
 	<source src="assets/vids/s10test2.mov" type="video/mp4">
   </video>
 
-  <p> With bounding box</p>
+  <p> With bounding box. To do this I added code which said that if the Button.Shape = "Rotating Ellipse" then draw the rectangle guide.</p>
   <video class="center" controls>
 	<source src="assets/vids/s10test3.mov" type="video/mp4">
   </video>
 
 
+<h3>Reflection:</h3>
+<p>Because I already had created the code for a regualar static ellipse, this made the process of getting it to spin easier. I'm pretty pleased with this web program now. 
+	All the features on it are really creative and any user would thrive in this environment. To improve this program would just include adding more features and maybe redeisgning the layout.
+</p>
 
 
 
 
-<br><br<br><br<br>
-
-
-
+<br><hr>
 <h1><a id=11>Sprint Eleven </a></h1>
 <p><a href="sprint11/sprinteleven.html" class="btn"  target="_blank">Link to the Canvas Page</a></p>
 
@@ -1134,7 +1160,7 @@ br><br><hr>
 <p> To make a rotating moving star
 </p>
 
-<br><br><h2>PLAN</h2> 
+<h2>PLAN</h2> 
 <img class="img-responsive" src="assets/img/s11plan.png" alt="The planning sheet for sprint 11">
 
 
@@ -1146,7 +1172,7 @@ br><br><hr>
 <h3>Test One: Test a static star works</h3>
 <p>It works</p>
 
-<img class="img-responsive" src="assets/img/s11test1.png" alt="The first test for sprint 11">
+<img class="img-responsive" src="assets/img/s11test1.png" height =400 alt="The first test for sprint 11">
 
 
 <h3>Test Two: Test a spinning star works</h3>
@@ -1171,94 +1197,43 @@ br><br><hr>
   </video>
 
 <br><br><h2>REFLECTION</h2> 
+<p>It is perfectly clear that I've made a high quality outcome. This is true as highlighted by the effective backlog project management system (with kanbans), 
+	version control system (repository that has my sprints for each new feature),  and extensive trailing and testing processes. If I hadn't impliemented a backlog and kanbands (project 
+	management system) I wouldn't have used prioritised my tasks well. I think it would've been easy getting caught coding countless shape buttons without considering the 
+	important of other features like boundary checks and colourmanagment. 
+	<br><br>
+	If I hadn't implimented a version control system, tracking and managing the changes made to my code, I 
+	think that I would've encountered a lot more issues, and perhaps some fatal issues. My repository that has the history of all the edits i've made and historical versions is such as asset 
+	as it allows me the freedom to change anything I want on the original source code and knowing that I could go into github and find my last commited verision of my project. Additionally, it 
+	makes it easier to manage all the changes that have been made to my code and what those changes were. As I push my code every sprint I know that I can find out what lines of code have been added 
+	to create each feature (of the sprint) and what code I could've removed to fix a error. I have kept track of modifications made to my code and because of this my code is organised.
+	The way I used iteration in the form of having a sprint for each additional feature added to the application has improved my productivity as it makes the
+	 development process very efficient. It is efficient as I can make goals of completing each sprint inside a given timeframe, where I only have to focus on one feature 
+	 instead of coming across a whole lot of issues and geting distracted by wanting to fix every issue that comes up even if it's insignificant and doesn't largely impact the 
+	 functionality of the program. 
+	 <br><br>
+	 My thorough trailling and testing processes were a very useful way to pick up small and big problems while iterating. I found it the most helpful as 
+	 i managed to become aware of many issues while working on each sprint and because I had this imformation I was able to distinguish what problems needed fixing immediately and what 
+	 problems were to go on the project backlog. These trailing processes made sure that I had the best solutions and implementations of new features which minimises the amount 
+	 of problems I had in the future. By trialling alternative approaches I was able to deduct the best step forward and I didn't have to waste my time by implementing a ineffective 
+	 solution and then find out in the next sprint that it created more problems. For instance, I was able to figure out that having a new object set (a new button class with different static variables) 
+	 when introducing another set of options for polygons was the better option. It was good to figure out in the trailling process that this way was more functional and less cluttered than compared to 
+	 changing a variable inside the instatiation of the polygon (adding mulitple buttons). If I had chosen this less effective option I might've been at sprint 11 and struggling to find any room on the page
+	 as well as sifting through an abundance of code repetitions. The thorough testing process allowed me to pinpoint problems in my code so I could make the appropriate corrections.
+	I made sure to test mulitple times throughout each sprint, more importantly I tested each time I added another element to the code. Testing each element is very important because to get a high 
+	quailty outcome all elements must perform is a efficient manner. Because I did so much testing, I am more certain about the accuracy of my code as if I solved all significant issues with the code, I can 
+	expect the code to be reliable. I found that testing helped me personally as it helped me spend less time on debugging my code. This is because each time I cam across a bug I knew it would 
+	be from something in the code I added sinced my last sucessful test. And since I tested so frequently I didn't need to sort through hundreds of lines of code to find where I went wrong. For example, when 
+	I was testing my brush I noticed that it went outside of the drawing area, because I had only incorprated the brush code that was inside controlobject.js, it narrowed down where I 
+	was looking for an error.
 
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br>
-<br><br><hr>
-<h1><a id="4">Sprint Four </a></h1>
-<p><a href="" class="btn"  target="_blank">Link to the Canvas Page</a></p>
-
-
-
-<h2>AIM</h2>
-<p> 
 </p>
 
-<br><br><h2>PLAN</h2> 
-<img class="img-responsive" src="assets/img/s2plan" alt="The planning sheet for sprint _">
-
-
-<br><br><h2>KANBAN BOARD</h2> 
-<img class="img-responsive" src="assets/img/s2kanban" alt="The kanban sheet for sprint _">
-
-
-<br><br><h2>TESTING</h2> 
-<h3>Test One:</h3>
-<video class="center" controls>
-	<source src="assets/vids/s2test1.mp4" type="video/mp4">
-  </video>
-
-<h3>Test Two:</h3>
-<video class="center" controls>
-	<source src="assets/vids/s2test2.mp4" type="video/mp4">
-  </video>
-
-<br><br><h2>REFLECTION</h2> 
-
-
-<br><br<br><br<br><br<br><br<br><br<br><br>
 
 
 
 
-
-
-
-
-
-
-
-
-<br><br><h2>REFLECTION</h2> 
-
-
-<br><br<br><br<br><br<br><br<br><br<br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3>Test Two:</h3>
-<p> I found a problem after I clicked and draged a rectangle it would continue to draw the rectangle guide, and keep
-	the MouseStart point. You can also see that my tap of the mouse is registered to create the rectangle guide, but 
-it doesn't create a filled in rectangle.</table>
-</p>
-  <video class="center" controls>
-	<source src="assets/vids/s2test2.mov" type="video/mp4">
-  </video>
-<br><br>
-
-
-<p> <b>How to fix the current mouse listener problem</b>
+<p><b>How to fix the current mouse listener problem</b>
 	The problem is that the mouse up event is not recognise if the user goes beyound the boundary of the canvas.
 This is a problem because the mouse listeners are only attached the the canvas.
 
@@ -1267,19 +1242,70 @@ Options 1) Allow the user to carry on (?)
 Option 2) When they draw out, the box goes up the boundary
 
 Option 3) Create a clipping mask so everything that gets drawn after the canvas gets cut off
+</b> </p>
 
-</b>
-	
-</p>
+
+
+
+
 
 <br><br>
 <h1><a id="O">Other </a></h1>
 
 <h2>PROJECT BACKLOG</h2>
-<p>Make creating buttons more efficient.</p>
+<p>What my project backlog looked at the beginning:</p>
 
-<img class="img-responsive" src="assets/img/pb.png" alt="The project backlog">
+<img class="img-responsive" src="assets/img/pb.png" height =500 alt="The project backlog">
 
+<p>What it looked like in the middle:</p>
+<img class="img-responsive" src="assets/img/pba.png" height =500 alt="The project backlog">
+
+<p>
+	A backlog is a prioritized list of tasks that I needed to work on within the scope of this project. This strategy was incredible helpful for me to priorise what features 
+	I had to add first. As you can see I priotised the major compments such as a couple of shape buttons, colour management and a working drawing area. Then I started to work on 
+	more features such as other shape buttons such as Polygons and rotating ellipses. This is because the program would benefit significiantly more from a range of colour options than 
+	a triangle option.
+	<br>
+	Through my testing and development of my program I have been able to think of new ideas during the process of making the web application. For this 
+	reason, the backlog increases as I make the program. This is a good sign because I'm thinking of important features that a user would really appreciate and they 
+	get added to this project backlog. 
+	<br>
+	I think the backlog helped me most while planning what I would work on each sprint. This project managament system taught me that the features that have the biggest yield, 
+	the relatively biggest improvement to the program, would be the features that I should work on immediately. These high yield feature would include a drawing page and colour management 
+	as these are huge componements of the web application. Getting further down my sprints, there was a trend on working on features that had lower yield, less significant improvments in my program. I 
+	think that this signaled that I was coming to a nature reassing point of 'What is left to do?', other than test of more bugs. That is why you'll see that after sprint 5, the 
+	majority of my energy is spent focused on developing more shape object buttons. I think that these features were crucial to fufilling my brief and making sure the user had enough freedom 
+	to creat anything they wanted with geometric shapes. I think what's important to notes that this project management system really helped most in sprint 1 through to sprint 6. 
+</p>
+
+<br>
+<h2>Relevant Implications</h2>
+<p>making decisions about how you have designed the user interface to make the application easier to use</p>
+<h3>Usability</h3>
+
+
+<h3>Functionality</h3>
+
+
+<h3>Sustainability and future proofing</h3>
+
+
+
+<br>
+<h2>Git commit evidence</h2>
+<p>As you can see I've done 12 commits for this project. This is important because if these files get lost or deleted I can easily go into github and find them again.</p>
+
+<img class="img-responsive" src="assets/img/pb1.png" height =500 alt="The git commit">
+
+
+<br>
+<h2>Javascript code style checker:</h2>
+<p>I uploaded my code in my separate files so as you can see I received a few errors, however I know that I do use all of these classes inside controlobject.js.</p>
+
+<img class="img-responsive" src="assets/img/a.png" height =400 alt="The style check screen shortcut">
+
+<p> Then I got this:</p>
+<img class="img-responsive" src="assets/img/b.png" height =100 alt="The style check screen shortcut">
 
 
 	</div>

@@ -40,7 +40,7 @@ class Button{
         this.xMouse = e.offsetX;
         this.yMouse = e.offsetY;
         // check if the mouse is in bounds while the mouse is moving
-        this.inBounds = this.inBoundsCheck(this.xMouse,this.yMouse, this.x, this.y, this.w, this.h)
+        this.inBounds = this.inBoundsCheck(this.xMouse,this.yMouse, this.x, this.y, this.w, this.h);
     }
 
     inBoundsCheck(xM, yM, x, y, w, h){
@@ -82,14 +82,14 @@ class Button{
         ctx.stroke();
 
         // text on button
-        ctx.fillStyle=this.outline
+        ctx.fillStyle=this.outline;
         var myFont = "bold 20px 'Trebuchet MS', Verdana, sans-serif";
         ctx.textBaseline = 'middle';
         ctx.textAlign = 'center';
         // sets the font from 'var myFont'
         ctx.font=myFont;
         // set the text in the middle of the button
-        ctx.fillText(this.text, this.x+this.w/2, this.y+this.h/2)
+        ctx.fillText(this.text, this.x+this.w/2, this.y+this.h/2);
 
     }
     

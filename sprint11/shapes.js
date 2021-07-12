@@ -1,4 +1,4 @@
-console.log("shapes js is called")
+console.log("shapes js is called");
 
 // class Rectangle (x, y, w, h, colour)
 class Rectangle{
@@ -66,10 +66,10 @@ class Triangle{
 
     draw(){
         ctx.beginPath();
-        ctx.moveTo(this.x + this.w/2, this.y)
-        ctx.lineTo(this.x+this.w, this.y+this.h)
-        ctx.lineTo(this.x, this.y+this.h)
-        //ctx.closePath();
+        ctx.moveTo(this.x + this.w/2, this.y);
+        ctx.lineTo(this.x+this.w, this.y+this.h);
+        ctx.lineTo(this.x, this.y+this.h);
+        ctx.closePath();
         ctx.fillStyle = this.c;
         ctx.fill();
     }
@@ -98,7 +98,7 @@ class Polygon{
     draw(){
         var x = 0;
         var y = 0;
-        var R = Math.min(Math.abs(this.w),Math.abs(this.h))/2
+        var R = Math.min(Math.abs(this.w),Math.abs(this.h))/2;
         // draw polygon
         ctx.beginPath();
         
@@ -138,7 +138,7 @@ class Line{
     }
 
     update(){
-        this.draw()
+        this.draw();
     }
 
     draw(){
@@ -158,9 +158,9 @@ class Line{
 class Brush{
     // constructor takes x coordinate, y coordinate, radius and colour
     constructor(x, y, r, c){
-        // centre x
+        // centre x;
         this.xC = x; 
-        // centre y
+        // centre y;
         this.yC =y; 
         this.r = r;
         this.fill = c;
@@ -199,10 +199,10 @@ class Diamond{
     draw(){
         // draw diamond
         ctx.beginPath();
-        ctx.moveTo(this.x + this.w/2, this.y)
-        ctx.lineTo(this.x+this.w, this.y+this.h/2)
-        ctx.lineTo(this.x +this.w/2, this.y+this.h)
-        ctx.lineTo(this.x, this.y+this.h/2)
+        ctx.moveTo(this.x + this.w/2, this.y);
+        ctx.lineTo(this.x+this.w, this.y+this.h/2);
+        ctx.lineTo(this.x +this.w/2, this.y+this.h);
+        ctx.lineTo(this.x, this.y+this.h/2);
         ctx.closePath();
         ctx.fillStyle = this.fill;
         ctx.fill();
@@ -223,7 +223,7 @@ class RotatingEllipse{
         this.yR = Math.abs(h/2);
         this.c = fillcolour;
         // counter starts at 0
-        this.counter = 0
+        this.counter = 0;
     }
 
 draw(){
@@ -235,7 +235,7 @@ draw(){
 
 update(){
     // counter increases by 1 every 1/40th of a second
-    this.counter +=1
+    this.counter +=1;
     // ellipse is drawn
     this.draw();
     }
@@ -245,7 +245,7 @@ update(){
 
 // class Star (r,xC,yC,n,colour,counter)
 class Star{
-    // variables that constructor takes are centre x and y coordinates, radius, number of points, colour
+    // variables that the constructor takes are centre x and y coordinates, radius, number of points, colour
     constructor(xC, yC, r, points, c){
         this.r = r;
         this.xC = xC;
@@ -258,22 +258,22 @@ class Star{
     draw(){
         var x = 0;
         var y = 0;
-        var n = this.n * 2
-        var rad = this.r/3
-        var R 
+        var n = this.n * 2;
+        var rad = this.r/3;
+        var R;
         ctx.lineWidth = 10;
 
         ctx.beginPath();
         for(var i=0; i<n; i++){
             // every second point drawn will be on the outer circle
             if (i%2==0){
-                R = this.r
+                R = this.r;
             }else{
-                R = rad
+                R = rad;
             }
 
-            x = this.xC + R*Math.cos(i*2*Math.PI/n  +this.counter/20)
-            y = this.yC + R*Math.sin(i*2*Math.PI/n  +this.counter/20)
+            x = this.xC + R*Math.cos(i*2*Math.PI/n  +this.counter/20);
+            y = this.yC + R*Math.sin(i*2*Math.PI/n  +this.counter/20);
             
             if(i==0){
                 //for the first point
@@ -285,7 +285,7 @@ class Star{
         }
 
         ctx.closePath();
-        ctx.rotate(Math.PI * 2)  
+        ctx.rotate(Math.PI * 2);
         ctx.fillStyle = this.fillStyle;
         ctx.fill();
     }
