@@ -49,16 +49,23 @@
 			</div>
 			<div class="content">
 
-                
-				<h1>SORRY HAVEN'T FINISHED QUITE YET, GOTTA UPDATE THIS PLANNING DOC SOME MORE</h>
-
 			
     <h1>Brief</h1>
 	<p> To make a web based drawing application which allows the user to draw shapes and lines and to manage colours.
 		This project needs to have a canvas environment and could include having animated drawing elements. 
 		This would be designed for 7 and 8 students to help make geometric shapes and patterns exciting so they'll be more 
 		enthused for Math.	</p>
-<br><hr>
+<br>
+<h1>What I had to consider:</h1>
+<p>Using agile processes by developing the project using sprints
+	<br>Decomposing into smaller components by buliding the programme one function at a time (usually it was one function per sprint)
+	<br>Coming up for multiple approaches to a function or fixing a component, as shown in the iterative deicsions
+	<br>Testing regually, during and at the end of each sprint - so I can address problems as I discover them
+	<br>Managing a product backlog so I can protise which features are most important
+	<br>Using GitHub to reguarly commit my finished sprints on git hub</p>
+
+
+<hr>
 
 
 <h1><a id="1">Sprint One </a></h1>
@@ -572,7 +579,7 @@ From doing this, I could look at other parts of the code to check - testing my p
 
 <img class="img-responsive" src="assets/img/s5test3a.png" height=400  alt="A test for sprint 5">
 
-<p> However, I found a problem. This problem was that the polygon wasn't drawn inside the bounding box. To fix this I had to make sure to make the radius half
+<p> However, I found a problem,one of many I've encountered during this process. This problem was that the polygon wasn't drawn inside the bounding box. To fix this I had to make sure to make the radius half
 	of h or w, depending whether the height or width is smallest. In my video, you see when I drag and drag a bounding box with a small width and a big height, 
 	it will make a polygon based on the large height - making a big polygon. The ideal polygon to be created is one within a square with a side length which is
 	the width of the original bounding box. This ensures that the polygon created is fully inside the bounding box created by the user. To fully understand this idea,
@@ -1212,16 +1219,28 @@ project fully.
 	 instead of coming across a whole lot of issues and geting distracted by wanting to fix every issue that comes up even if it's insignificant and doesn't largely impact the 
 	 functionality of the program. 
 	 <br><br>
-	 My thorough trailling and testing processes were a very useful way to pick up small and big problems while iterating. I found it the most helpful as 
-	 i managed to become aware of many issues while working on each sprint and because I had this imformation I was able to distinguish what problems needed fixing immediately and what 
-	 problems were to go on the project backlog. These trailing processes made sure that I had the best solutions and implementations of new features which minimises the amount 
+
+	 My thorough trailling and testing processes were a very useful way to pick up small and big problems while iterating. I found testing the most helpful as 
+	 i managed to become aware of many issues while working on each sprint. Since I had this information and insight of what the problems were, I was able to distinguish between 
+	  what problems needed fixing immediately and what 
+	 problems were to go on the project backlog. 
+	 <br><br>
+	 My trailing processes made sure that I had the best solutions and implementations of new features which minimises the amount 
 	 of problems I had in the future. By trialling alternative approaches I was able to deduct the best step forward and I didn't have to waste my time by implementing a ineffective 
 	 solution and then find out in the next sprint that it created more problems. For instance, I was able to figure out that having a new object set (a new button class with different static variables) 
 	 when introducing another set of options for polygons was the better option. It was good to figure out in the trailling process that this way was more functional and less cluttered than compared to 
 	 changing a variable inside the instatiation of the polygon (adding mulitple buttons). If I had chosen this less effective option I might've been at sprint 11 and struggling to find any room on the page
 	 as well as sifting through an abundance of code repetitions. The thorough testing process allowed me to pinpoint problems in my code so I could make the appropriate corrections.
-	I made sure to test mulitple times throughout each sprint, more importantly I tested each time I added another element to the code. Testing each element is very important because to get a high 
-	quailty outcome all elements must perform is a efficient manner. Because I did so much testing, I am more certain about the accuracy of my code as if I solved all significant issues with the code, I can 
+	I made sure to test mulitple times throughout each sprint, more importantly I tested each time I added another element to the code. Another time where I explored different options is when I 
+	decided how to limit the shapes to be only drawn inside the drawing area in one of the earlier sprints. I had one option to limit the bounding box from exceeding the drawing area and the other to save, clip and restore. I 
+	chose limiting the bounding box from exceeding the drawing area to be the better solution because it indicated to the user that they should always stay inside of the drawing area because if their mouse went outside, 
+	their bounding box would stop appearing. It was also important to keep testing these solutions in later sprints when more features had been added to see if this solution was still applicable. It was seen in 
+	sprint 8 or so that for my program to work well I would actually need to incorprate both of these solution because both were needed for all of these shape options. This shows the intersection of maximising the advantages 
+	of both trialling and testing. I was able to improve the functionality of my outcome through this.
+	<br><br>
+	Testing each element is very important because to get a high 
+	quailty outcome all elements must perform is a efficient manner. When testing I found that objects could be created anywhere on the page and not just the drawing pages, in a early verision,
+	this lead to the incorpration for the bounds check function. Because I did so much testing, I am more certain about the accuracy of my code as if I solved all significant issues with the code, I can 
 	expect the code to be reliable. I found that testing helped me personally as it helped me spend less time on debugging my code. This is because each time I cam across a bug I knew it would 
 	be from something in the code I added sinced my last sucessful test. And since I tested so frequently I didn't need to sort through hundreds of lines of code to find where I went wrong. For example, when 
 	I was testing my brush I noticed that it went outside of the drawing area, because I had only incorprated the brush code that was inside controlobject.js, it narrowed down where I 
@@ -1250,9 +1269,35 @@ Option 3) Create a clipping mask so everything that gets drawn after the canvas 
 
 
 <br><br>
-<h1><a id="O">Other </a></h1>
+<h1><a id="0">OTHER </a></h1>
+<h2> Using Github as a project management</h2>
+<p>I used Github for a version control for my project so I could implement agile processes. 
+	In software development, agile practices revolve around adaptive planning, quick development and continual 
+	improvement. I bulit my project in the form of sprints where I did an iteration in a small timeframe for each sprint, 
+	making sure I continuously went through the development cycle (plan, develop, build and evaluate, until development is complete). 
+	I tested each sprint seperately before implementing it new functions/code into the main program, and when the main program was upto date 
+	I would test again. Agile processes encourage flexible responses to change. I was able to do this by changing my plan of what to focus on in
+	 the next sprint depending on what I uncovered during the testing stage. Each version of my code is stored on Github. My backlog Kanban sprint 
+	 boards are also kept on Github, displaning my overall plan as well as my plan for each sprint. I commited each sprint to Github after I had completely
+	  finished each sprint. I can access each sprint as well as my main program at any point through Github and see it displayed in the 'Network' 
+	  section (as shown below).</p>
 
-<h2>PROJECT BACKLOG</h2>
+<p>Shows my progress with all my kanban sprint boards</p>
+<img class="img-responsive" src="assets/img/111.png" height =500 alt="This is all my kanban's for each sprint">
+
+<p>Network section: shows the commit history</p>
+<img class="img-responsive" src="assets/img/1111.png" alt="This is the the network part of my Github
+">
+
+<h2>Project Backlog:</h2>
+<p>I used a backlog to prioritise stages of work, this is an important part of an agile development. 
+	My backlog displays a prioritised list of features to implement into my project. It presents the important tasks 
+	that I have to do at the top of the list, which indicates to me which tasks I should be working on first. This made me 
+	able to manage my project more easily as it gave me an idea of what to work on every lesson. I was able to estimate what 
+	I would be working on and in which order, essiential a roadmap to the project. At the beginning of my project I had all my 
+	features I wanted to add in the To-Do column in a prioritised order. As I was working through each sprint I would move the card 
+	through the columns to completed. 
+	Sometimes during testing of the sprints I would find another feature I would have to add and add it to the To-Do column. </p>
 <p>What my project backlog looked at the beginning:</p>
 
 <img class="img-responsive" src="assets/img/pb.png" height =500 alt="The project backlog">
@@ -1268,7 +1313,8 @@ Option 3) Create a clipping mask so everything that gets drawn after the canvas 
 	<br>
 	Through my testing and development of my program I have been able to think of new ideas during the process of making the web application. For this 
 	reason, the backlog increases as I make the program. This is a good sign because I'm thinking of important features that a user would really appreciate and they 
-	get added to this project backlog. 
+	get added to this project backlog. This was very important because in sprint 5 I realised that the drawing page could get very cluttered and messy so I had to focus on 
+	adding the feature of adding a clear and undo button.
 	<br>
 	I think the backlog helped me most while planning what I would work on each sprint. This project managament system taught me that the features that have the biggest yield, 
 	the relatively biggest improvement to the program, would be the features that I should work on immediately. These high yield feature would include a drawing page and colour management 
@@ -1279,17 +1325,67 @@ Option 3) Create a clipping mask so everything that gets drawn after the canvas 
 </p>
 
 <br>
-<h2>Relevant Implications</h2>
-<p>making decisions about how you have designed the user interface to make the application easier to use</p>
-<h3>Usability</h3>
+<h2>Standups:</h2>
+<p>To make sure that I was on track and had a plan for the lesson, during the project i often had a short 
+	assessing timeslot at the beginning of class. It would consist of questions of 1. what I had already completed, 2. 
+	What I intend to work on today, and 3. what is blocking me for doing my task. This was incredibly helpful for me to 
+	manage my project as it allows me to divide tasks into short phases of work e.g. working on one part of the project in one lesson 
+	and other part in the next one. I can frequently reassess how I'm working and what is the most important at the present moment. 
+	It also allows me to adaptat plans easily, as if I'm consistently reassessing, I can quickly shift my attention to the prioritised task.</p>
+<br>
 
+<h2>Relevant Implications</h2>
+
+<h3>Usability</h3>
+<p>The relevant implication of usability is about making sure the program is easy to use which will help minimise errors. To address this implication, I made sure there were 
+	ways my program tried to decrease the number of errors that the user could make - therefore, I made a simple interface. I did this by making sure that the user 
+	was aware of what they were doing on the interface at each time. Firstly, I made sure that the user knows that they can interact with buttons (if they click on it something 
+	will happen) as I had different hover colours and outline widths. Secondly, I made sure that the user knows that the drawing area is available to draw on as well, by making sure 
+	that a bounding box is drawn when the user clicks down on there. Thirdly, I made sure that the options are in a logical place so the user is easily able to assess what to click 
+	on first - the options for particular shapes e.g. number of sides for the polygons, is close to the general shape button, e.g. polgon button. I made These 3 decision about how 
+	I designed the user interface to make the application more usable and easier to use.
+
+	<img class="img-responsive" src="assets/img/pba11.png" alt="The usability image">
+<br>
+</p>
 
 <h3>Functionality</h3>
+<p>
+	I had to make sure I addressed the relevant implication of functionality to make sure I built a functional program that works well. Important things to consider 
+	while doing this is to make sure the program is free from bugs and loads quickly. I also tested my project to make sure it works on different browers e.g. Chrome and Safari.
+<br>
+	I have addressed this relevant implication by doing regular and systematic tests to find bugs 
+	in my program, so when it was finished I could ensure the user that there were no bugs. I tested at every single sprint inside the testing file and then again when 
+	I implemented the new feature into the main file. Secondly, I tested the individual functions to make sure they worked before incorporating into the main program
+	 crash so I wouldn’t make the main file have a bug. I tested using console logs, testing videos, user interactions ect. Console logging was crucial to making sure that my boundaries were correct, and 
+	 it helped me to locate the problematic parts of the code when a bug appeared. I also found it incredibly useful to test position by clicking and 
+	 dragging in various directions, carefully checking the boundaries, using 'Math.abs' when drawing circular shapes as these objection were orginally been given negative radius values.
+	 <br>
+	 To make sure that my drawing board loads quickly, I addressed this as my code is in pure javascript and has no graphics. I tested this by using the live web server (found on Github) 
+	 to test the loading performance. I can see that my project has a small file size which allows my program to run quickly.
 
+</p>
 
-<h3>Sustainability and future proofing</h3>
+<img class="img-responsive" src="assets/img/pba1111.png" height=300 alt="The functionality image">
+<br>
+<h3>Future Proofing</h3>
+<p>The relevant implication of future-proofing is all about the flexibility of the code. A program that is future-proofed well makes it easy to update or add new features and that old features are easy to remove. 
+	The code also has to follow industry standards so it’s easy for different programmers to understand and even adapt the code. Fundamentally, future-proofing is 
+	making sure that the code is ‘easy’ to understand. 
+	<br>
+	I addressed this relevant implication by building my program around a structure that means that each new feauture or page element that is added (swatches, buttons ect.) are all added 
+	to the code as objects. These objects are all individual modular bits of code, all taking set parameters and information to work. Since all objects that are added are bulit to 
+	similar strucutres and all contain update functions, all objects appear on the interface when using the update call. To make sure that my code was future proofed, I made sure that the management 
+	of most objects (that dictact page elements) are inside controlobject.js, a central  place. The entire code is designed in a way that if another programmer looked at my prgram, they could easily interpret what my code means, 
+	add components or remove featutres. It also helps that my comments are informative and frequent. I addressed this relevant implication as I was able to make sure the code fit industry standards. The code checker made sure that my code 
+	fit with javascript conventions. 
+	<br>
+	Adding new features is easy, especially considering that i have loops in main.js to make sure the addition of new similar feautres such as new buttons, is added easily. I have found it easy 
+	myself to add new feautres in each sprint as my programme has been deisgned well, as addressed above.
+	<Br> evidence of my presice commenting:
+	<img class="img-responsive" src="assets/img/pba111111.png" alt="The future proofing image">
 
-
+</p>
 
 <br>
 <h2>Git commit evidence</h2>
