@@ -22,14 +22,11 @@ class Swatch{
 
 
     mClick(e){
-        //console.log("click");
         // if we clicked and it's inbound then button has been selected
         if(this.inBounds){
             Swatch.Clicked = this;
             // the static variable of Swatch.Colour is now the fill colour of the swatch
             Swatch.Colour = this.fill;
-            //console.log(Swatch.Colour)
-        
         }
     }
 
@@ -76,8 +73,9 @@ class Swatch{
 
 }
 
-
+// static variable to make it so only one button can be selected at one time
 Swatch.Clicked = "";
+// static variable takes the text of the currently selected button
 Swatch.Colour  = colArray[0][0];
 
 

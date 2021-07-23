@@ -148,7 +148,7 @@ class ControlObject{
             // --------- Cool Star button outcomes ------------
             else if(Button.Shape == "Cool Star"){
                 // diamond object is created, using the dimesions of the draw guide
-                var temp = new Star(this.xMouseStart + this.w/2, this.yMouseStart + this.h/2, Math.abs(this.w/2), 6, Swatch.Colour);
+                var temp = new Star(this.xMouseStart + this.w/2, this.yMouseStart + this.h/2, Math.min(Math.abs(this.w),Math.abs(this.h))/2, 6, Swatch.Colour);
                 // add new object to object list
                 this.ObjectSet.push(temp);  
             }
