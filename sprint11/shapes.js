@@ -253,6 +253,8 @@ class Star{
         this.n = points;
         this.fillStyle = c;
         this.counter = 0;
+        this.dy = 4;
+        this.dx = 4;
     }
 
     draw(){
@@ -293,6 +295,16 @@ class Star{
     update(){
         // counter increases by 1 for every 1/40th of a second
         this.counter += 1;
+        this.xC += this.dx
+        this.yC += this.dy
+        if(this.yC>25+650 || this.yC<25){
+            this.dy = -this.dy
+        }
+        if(this.xC< 500|| this.xC>500+475){
+            this.dx = -this.dx
+        }
+        
+
         // draw a star
         this.draw();
     }

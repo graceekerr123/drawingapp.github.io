@@ -126,10 +126,30 @@ class ControlObject{
             }
             // --------- Line button outcomes ------------
             else if(Button.Shape == "Line"){
-                // line object is created, using the dimesions of the draw guide
-                var temp = new Line(this.xMouseStart, this.yMouseStart, this.xMouse, this.yMouse, 10, Swatch.Colour);
-                // add new object to object list
-                this.ObjectSet.push(temp);  
+                if (Circle_buttons.Value == "S"){
+                    // line object is created, using the dimesions of the draw guide
+                    var temp = new Line(this.xMouseStart, this.yMouseStart, this.xMouse, this.yMouse, 4, Swatch.Colour);
+                    // add new object to object list
+                    this.ObjectSet.push(temp);
+                }
+                else if (Circle_buttons.Value == "M"){
+                    // line object is created, using the dimesions of the draw guide
+                    var temp = new Line(this.xMouseStart, this.yMouseStart, this.xMouse, this.yMouse, 8, Swatch.Colour);
+                    // add new object to object list
+                    this.ObjectSet.push(temp);
+                }
+                else if (Circle_buttons.Value == "L"){
+                    // line object is created, using the dimesions of the draw guide
+                    var temp = new Line(this.xMouseStart, this.yMouseStart, this.xMouse, this.yMouse, 12, Swatch.Colour);
+                    // add new object to object list
+                    this.ObjectSet.push(temp);
+                }
+                else{
+                    // line object is created, using the dimesions of the draw guide
+                    var temp = new Line(this.xMouseStart, this.yMouseStart, this.xMouse, this.yMouse, 8, Swatch.Colour);
+                    // add new object to object list
+                    this.ObjectSet.push(temp);
+                }
             }
             // --------- Diamond button outcomes ------------
             else if(Button.Shape == "Diamond"){
@@ -231,7 +251,18 @@ class ControlObject{
             ctx.beginPath();
             ctx.moveTo(this.xMouseStart, this.yMouseStart)
             ctx.lineTo(this.xMouse,this.yMouse)
-            ctx.lineWidth = 15;
+            if (Circle_buttons.Value == "S"){
+                ctx.lineWidth = 4;
+            }
+            else if (Circle_buttons.Value == "M"){
+                ctx.lineWidth = 8;
+            }
+            else if (Circle_buttons.Value == "L"){
+                ctx.lineWidth = 12;
+            }
+            else{
+                ctx.lineWidth = 8;
+            }
             ctx.lineCap = "round";
             ctx.strokeStyle = Swatch.Colour;
             ctx.stroke();
